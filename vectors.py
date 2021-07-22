@@ -8,6 +8,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from bs4 import BeautifulSoup
 import re
+import warnings
+
+# setup
+warnings.filterwarnings("ignore", category=UserWarning, module='bs4')
 
 """
 Description: prints out comment at index i, its parent and whether it's labelled sarcastic or not
@@ -71,6 +75,16 @@ def tokenize(data):
             tokens.append(w.lower()) # maybe should not make lowercase
 
     return tokens;
+
+def create_model(tagged):
+    max_epochs = 30
+    model = Doc2Vec()  # of course, if non-default parameters needed, use them here
+    # but most users won't need to change alpha/min_alpha at all
+
+    model.build_vocab(tagged)
+    model.train(tagged, total_examples=model.corpus_count, epochs=max_epochs)
+
+    model.save("d2v.model")
 
 
 def main():
