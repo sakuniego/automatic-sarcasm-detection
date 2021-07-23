@@ -82,7 +82,7 @@ def tokenize(data):
     return tokens;
 
 def create_model(tag_train):
-    max_epochs = 30
+    max_epochs = 10
     model = Doc2Vec(workers = cores) # using dbow
 
     model.build_vocab(tag_train)
@@ -106,7 +106,7 @@ def main():
     in_df['comment'] = in_df['comment'].apply(clean_txt)
     in_df['parent_comment'] = in_df['parent_comment'].apply(clean_txt)
 
-    print("Took %s minutes to clean text\n" % round((time.time() - start_time_1)/60))
+    print("Took %s minutes to clean text\n" % round((time.time() - start_time_1)/60)) # printing how long process took
 
     start_time_2 = time.time()
     print("STATUS UPDATE: Tokenizing data...")
@@ -116,7 +116,7 @@ def main():
 
     # how can parent comment factor in?
     tag_train = train.apply(lambda r: TaggedDocument(words = tokenize(r['comment']), tags = [r.label]), axis = 1)
-    tag_test = test.apply(lambda r: TaggedDocument(words=tokenize(r['comment']), tags=[r.label]), axis=1)
+    tag_test = test.apply(lambda r: TaggedDocument(words = tokenize(r['comment']), tags = [r.label]), axis = 1)
 
     print("Took %s minutes to tokenize data\n" % round((time.time() - start_time_2)/60))
 
@@ -125,7 +125,7 @@ def main():
     print("STATUS UPDATE: Creating and training model...")
     start_time_3 = time.time()
     create_model(tag_train)
-    print("Took %s minutes to create/train model\n" % round((time.time() - start_time_3)/60))
+    print("Took %s minutes to create/train model\n" % round((time.time() - start_time_3)/60)) # TODO: Seems inaccurate
 
 
 main() # run main function
