@@ -12,6 +12,7 @@ import warnings
 import multiprocessing
 from sklearn import utils
 from sklearn.model_selection import train_test_split
+import time
 
 # setup
 cores = multiprocessing.cpu_count()
@@ -80,15 +81,14 @@ def tokenize(data):
 
     return tokens;
 
-def create_model(tag_train, tag_test):
+def create_model(tag_train):
     max_epochs = 30
-    model = Doc2Vec()  # of course, if non-default parameters needed, use them here
-    # but most users won't need to change alpha/min_alpha at all
+    model = Doc2Vec(workers = cores) # using dbow
 
     model.build_vocab(tag_train)
-    model.train(tag_train, total_examples=model.corpus_count, epochs=max_epochs)
+    model.train(tag_train, total_examples = model.corpus_count, epochs = max_epochs)
 
-    model.save("d2v.model")
+    model.save("d2v_sarc.model")
 
 
 def main():
@@ -117,8 +117,10 @@ def main():
     # TODO: Remove
     print(tag_train.values[0])
 
-    print("STATUS UPDATE: Creating and training model")
-    create_model(tag_train, tag_test)
+    print("STATUS UPDATE: Creating and training model...")
+    start_time = time.time()
+    create_model(tag_train)
+    print("Took %s seconds to create/train model" % (time.time() - start_time))
 
 
 main() # run main function
