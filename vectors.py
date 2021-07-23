@@ -12,6 +12,8 @@ import warnings
 import multiprocessing
 from sklearn import utils
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, f1_score
 import time
 import math
 
@@ -68,6 +70,7 @@ def raw_data_vis(in_df):
     plt.show()
 
 def clean_txt(text):
+    # TODO: Clean more
     text = BeautifulSoup(text, "lxml").text
     text = re.sub(r'http\S+', r'<URL>', text) # replace URLs
     text = text.lower()
@@ -82,9 +85,24 @@ def tokenize(data):
 
     return tokens;
 
+def similar_words(model, word):
+    print("Similar words to", word + ":")
+    print("(Similarity scores rounded to 4 decimals)")
+
+    i = 0
+    while (i < len(model.wv.most_similar(word))):
+        print("Word:", model.wv.most_similar(word)[i][0], "- Similarity score:",
+              round(model.wv.most_similar(word)[i][1],4))
+        i += 1
+
+def make_learn_vec(model, tag_data):
+    vals = tag_data.values
+    targets, regressors = zip(*[(post.tags[0], model.infer_vector(post.words, steps = 20)) for post in vals])
+    return targets, regressors
+
 def create_model(tag_train):
     max_epochs = 10
-    global model # defining as global var so accessible outside of this func TODO: might be a bad idea
+    global model  # defining as global var so accessible outside of this func TODO: might be a bad idea
     model = Doc2Vec(workers = cores) # using dbow
 
     model.build_vocab(tag_train)
@@ -94,13 +112,13 @@ def create_model(tag_train):
 
 
 def main():
+    # 1. DATA INITIALIZATION
     in_csv = "train-balanced-sarcasm.csv" # csv containing data
     in_df = parse(in_csv)
 
     # raw_data_vis(in_df) # shows details about the raw data count
     # print_post(in_df, 0) # replace second parameter with integer within [0, 1010825]
 
-    # TODO: clean up data using bs4
     start_time_1 = time.time()
     print("STATUS UPDATE: Cleaning text...")
 
@@ -111,6 +129,8 @@ def main():
     # printing how long process took (in minutes rounded up)
     print("Took <%s minutes to clean text\n" % math.ceil((time.time() - start_time_1)/60))
 
+    # 2. MODEL CREATION
+    # Preparing data...
     start_time_2 = time.time()
     print("STATUS UPDATE: Tokenizing data...")
 
@@ -126,13 +146,38 @@ def main():
 
     # print(tag_train.values[0]) # TODO: Remove
 
+    # Model creation...
+    """
     print("STATUS UPDATE: Creating and training model...")
     start_time_3 = time.time()
     create_model(tag_train)
     print("Took <%s minutes to create/train model\n" % math.ceil((time.time() - start_time_3)/60))
+    """
 
-    # TODO: delete
-    # print(model.wv.most_similar("republican"))
+    # 3. USING MODEL
+    model = Doc2Vec.load("d2v_sarc.model") # loading existing model
+    print("STATUS UPDATE: Loaded pre-trained model\n")
 
+    # Find similar words...
+    # word = "nevada" # change this to the word you'd like to see
+    # similar_words(model, word)
+
+    # Training classifier... (log reg)
+    print("STATUS UPDATE: Training classifier...")
+    start_time_4 = time.time()
+    #TODO: put in own method
+    train_y, train_X = make_learn_vec(model, tag_train)
+    test_y, test_X = make_learn_vec(model, tag_test)
+
+    classifier = LogisticRegression(n_jobs = 1, C = 1e5)
+    classifier.fit(train_X, train_y)
+    print("Took <%s minutes to train classifier\n" % math.ceil((time.time() - start_time_4) / 60))
+
+    prediction = classifier.predict(test_X)
+    #TODO: put logistic regression graph here
+
+    print("Testing scores...")
+    print("Accuracy: %s" % accuracy_score(test_y, prediction))
+    print("f1 score: {}".format(f1_score(test_y, prediction, average = "weighted")))
 
 main() # run main function
