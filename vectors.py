@@ -96,15 +96,19 @@ def main():
     in_df = parse(in_csv)
 
     # raw_data_vis(in_df) # shows details about the raw data count
-    print_post(in_df, 0) # replace second parameter with integer within [0, 1010825]
+    # print_post(in_df, 0) # replace second parameter with integer within [0, 1010825]
 
     # TODO: clean up data using bs4
+    start_time_1 = time.time()
     print("STATUS UPDATE: Cleaning text...")
+
     in_df = in_df.fillna("na") # TODO: did to avoid TypeError, INSTEAD DELETE NULL VALUES IN PARSE AND REMOVE THIS
     in_df['comment'] = in_df['comment'].apply(clean_txt)
     in_df['parent_comment'] = in_df['parent_comment'].apply(clean_txt)
 
-    # TODO: REMOVE
+    print("Took %s minutes to clean text\n" % round((time.time() - start_time_1)/60))
+
+    start_time_2 = time.time()
     print("STATUS UPDATE: Tokenizing data...")
 
     # Splitting data into training and testing sets
@@ -114,13 +118,14 @@ def main():
     tag_train = train.apply(lambda r: TaggedDocument(words = tokenize(r['comment']), tags = [r.label]), axis = 1)
     tag_test = test.apply(lambda r: TaggedDocument(words=tokenize(r['comment']), tags=[r.label]), axis=1)
 
-    # TODO: Remove
-    print(tag_train.values[0])
+    print("Took %s minutes to tokenize data\n" % round((time.time() - start_time_2)/60))
+
+    # print(tag_train.values[0]) # TODO: Remove
 
     print("STATUS UPDATE: Creating and training model...")
-    start_time = time.time()
+    start_time_3 = time.time()
     create_model(tag_train)
-    print("Took %s seconds to create/train model" % (time.time() - start_time))
+    print("Took %s minutes to create/train model\n" % round((time.time() - start_time_3)/60))
 
 
 main() # run main function
