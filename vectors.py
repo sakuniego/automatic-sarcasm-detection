@@ -9,8 +9,12 @@ import seaborn as sns
 from bs4 import BeautifulSoup
 import re
 import warnings
+import multiprocessing
+from sklearn import utils
+from sklearn.model_selection import train_test_split
 
 # setup
+cores = multiprocessing.cpu_count()
 warnings.filterwarnings("ignore", category=UserWarning, module='bs4')
 
 """
@@ -76,20 +80,20 @@ def tokenize(data):
 
     return tokens;
 
-def create_model(tagged):
+def create_model(tag_train, tag_test):
     max_epochs = 30
     model = Doc2Vec()  # of course, if non-default parameters needed, use them here
     # but most users won't need to change alpha/min_alpha at all
 
-    model.build_vocab(tagged)
-    model.train(tagged, total_examples=model.corpus_count, epochs=max_epochs)
+    model.build_vocab(tag_train)
+    model.train(tag_train, total_examples=model.corpus_count, epochs=max_epochs)
 
     model.save("d2v.model")
 
 
 def main():
-    in_file = "train-balanced-sarcasm.csv" # csv containing input data
-    in_df = parse(in_file) # should be equal to parsed input file
+    in_csv = "train-balanced-sarcasm.csv" # csv containing data
+    in_df = parse(in_csv)
 
     # raw_data_vis(in_df) # shows details about the raw data count
     print_post(in_df, 0) # replace second parameter with integer within [0, 1010825]
@@ -101,20 +105,20 @@ def main():
     in_df['parent_comment'] = in_df['parent_comment'].apply(clean_txt)
 
     # TODO: REMOVE
-    print("STATUS UPDATE: Starting tokenization...")
+    print("STATUS UPDATE: Tokenizing data...")
 
-    # TODO: do train/test split
-
-    train = in_df
+    # Splitting data into training and testing sets
+    train, test = train_test_split(in_df, test_size = 0.3, random_state = 42)
 
     # how can parent comment factor in?
-    # TODO: this results in error
     tag_train = train.apply(lambda r: TaggedDocument(words = tokenize(r['comment']), tags = [r.label]), axis = 1)
+    tag_test = test.apply(lambda r: TaggedDocument(words=tokenize(r['comment']), tags=[r.label]), axis=1)
 
     # TODO: Remove
     print(tag_train.values[0])
 
-    # tag_test =
+    print("STATUS UPDATE: Creating and training model")
+    create_model(tag_train, tag_test)
 
 
 main() # run main function
