@@ -7,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from bs4 import BeautifulSoup
-import re
+import re # regular expressions
 import warnings
 import multiprocessing
 from sklearn import utils
@@ -136,18 +136,3 @@ def main():
 
 
 main() # run main function
-
-
-# TODO: this is for building d2v model
-
-# take in and process data (turn into tagged documents iterable format)
-# documents = 0
-
-# create model
-# model = Doc2Vec(documents,
-                #vector_size=5,
-                #window=2,
-                #min_count=1,
-                #workers=4)
-
-
