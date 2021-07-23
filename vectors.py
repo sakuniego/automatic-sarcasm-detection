@@ -13,6 +13,7 @@ import multiprocessing
 from sklearn import utils
 from sklearn.model_selection import train_test_split
 import time
+import math
 
 # setup
 cores = multiprocessing.cpu_count()
@@ -83,6 +84,7 @@ def tokenize(data):
 
 def create_model(tag_train):
     max_epochs = 10
+    global model # defining as global var so accessible outside of this func TODO: might be a bad idea
     model = Doc2Vec(workers = cores) # using dbow
 
     model.build_vocab(tag_train)
@@ -106,7 +108,8 @@ def main():
     in_df['comment'] = in_df['comment'].apply(clean_txt)
     in_df['parent_comment'] = in_df['parent_comment'].apply(clean_txt)
 
-    print("Took %s minutes to clean text\n" % round((time.time() - start_time_1)/60)) # printing how long process took
+    # printing how long process took (in minutes rounded up)
+    print("Took <%s minutes to clean text\n" % math.ceil((time.time() - start_time_1)/60))
 
     start_time_2 = time.time()
     print("STATUS UPDATE: Tokenizing data...")
@@ -115,17 +118,21 @@ def main():
     train, test = train_test_split(in_df, test_size = 0.3, random_state = 42)
 
     # how can parent comment factor in?
+    #TODO: should tags be unique? multiple tags?
     tag_train = train.apply(lambda r: TaggedDocument(words = tokenize(r['comment']), tags = [r.label]), axis = 1)
     tag_test = test.apply(lambda r: TaggedDocument(words = tokenize(r['comment']), tags = [r.label]), axis = 1)
 
-    print("Took %s minutes to tokenize data\n" % round((time.time() - start_time_2)/60))
+    print("Took <%s minutes to tokenize data\n" % math.ceil((time.time() - start_time_2)/60))
 
     # print(tag_train.values[0]) # TODO: Remove
 
     print("STATUS UPDATE: Creating and training model...")
     start_time_3 = time.time()
     create_model(tag_train)
-    print("Took %s minutes to create/train model\n" % round((time.time() - start_time_3)/60)) # TODO: Seems inaccurate
+    print("Took <%s minutes to create/train model\n" % math.ceil((time.time() - start_time_3)/60))
+
+    # TODO: delete
+    # print(model.wv.most_similar("republican"))
 
 
 main() # run main function
