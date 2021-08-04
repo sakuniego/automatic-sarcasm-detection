@@ -15,7 +15,7 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 * May need to import nltk and do nltk.download(‘punkt’) (in python console)
 * May need to run pip install python-Levenshtein to suppress error
   * If on Linux machine may get error: unable to execute 'x86_64-linux-gnu-gcc': No such file or directory
-  * Run: `sudo apt-get install python3.x-dev`
+    * Run: `sudo apt-get install python3.x-dev`
   * x should be replaced with subversion of python (e.g. 8 for python 3.8)
   * Run `python --version` to find current version
 * https://stackoverflow.com/questions/24398302/bs4-featurenotfound-couldnt-find-a-tree-builder-with-the-features-you-requeste
