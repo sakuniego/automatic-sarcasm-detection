@@ -3,7 +3,8 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 
 ## How To Run
 1) Clone repo
-2) Run `schitt.py`
+2) Install necessary packages in `schitt.py`
+3) Run `schitt.py`
 
 ## Data
 * `season_1_plain.csv`: includes..., used as training data for MLPClassifier
