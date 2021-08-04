@@ -250,7 +250,11 @@ def create_mlp(train_vecs, train_labels):
                                                                                               train_labels)
     # label_pred = basic_clf.predict(scaled_test_vecs)
 
-    # return basic_clf.score(scaled_test_vecs, test_labels)
+    # print(basic_clf.score(scaled_test_vecs, test_labels))
+
+    # fig = plot_confusion_matrix(basic_clf, scaled_test_vecs, test_labels, display_labels = [0, 1])
+    # fig.figure_.suptitle("Schitt's Creek Sarcasm Confusion Matrix")
+    # plt.show()
 
 def individual_mlp(speaker, df_train): # TODO: Add df_test
     df_train = df_train[df_train['speaker'].str.contains(speaker)] # removing all rows where speaker col !contain speaker param
@@ -394,24 +398,5 @@ def main():
     # creating actual models
     # create_mlp(train_vecs, train_labels) # TODO: Store result and print return value
     individual_mlp("David", in_df)
-
-
-    """
-    start_time_4 = time.time()
-    #TODO: put in own method
-    train_y, train_X = make_learn_vec(model, tag_train)
-    test_y, test_X = make_learn_vec(model, tag_test)
-
-    classifier = LogisticRegression(n_jobs = 1, C = 1e5)
-    classifier.fit(train_X, train_y)
-    print("Took <%s minutes to train classifier\n" % math.ceil((time.time() - start_time_4) / 60))
-
-    prediction = classifier.predict(test_X)
-    #TODO: put logistic regression graph here
-
-    print("Testing scores...")
-    print("Accuracy: %s" % accuracy_score(test_y, prediction))
-    print("f1 score: {}".format(f1_score(test_y, prediction, average = "weighted")))
-    """
 
 main() # run main function
