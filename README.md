@@ -38,10 +38,8 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
   * Run: `pip install lxml` (in Terminal)
 
 ### Glossary
-**Doc2Vec**: method for turning chunks of text (whole documents or even sentences) into vectors that can be more easily processed by a machine learning model
-
-**sarcasm detection**: type of sentiment analysis, detecting sarcasm in given text
-
+**Doc2Vec**: method for turning chunks of text (whole documents or even sentences) into vectors that can be more easily processed by a machine learning model  
+**sarcasm detection**: type of sentiment analysis, detecting sarcasm in given text  
 **sentiment analysis**: determining the emotion (and other subjective features) of a given text
 
 ### Credits
@@ -61,7 +59,5 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 
 ### Contact
 If you have any questions, please don't hesitate to reach out.
-
-Email: egodawatte@wisc.edu
-
-LinkedIn: [linkedin.com/in/sakuni](https://www.linkedin.com/in/sakuni/)
+* Email: egodawatte@wisc.edu
+* LinkedIn: [linkedin.com/in/sakuni](https://www.linkedin.com/in/sakuni/)
