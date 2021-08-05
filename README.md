@@ -9,8 +9,8 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 **Recommended IDE**: PyCharm
 
 ## Data
-* `/data/season_1_plain.csv`: includes..., used as training data for MLPClassifier
-* `/data/season_1_excel.xlsx`: excel document containing additional organization of above data
+* `/data/season_#_plain.csv`: includes..., used as training data for MLPClassifier
+* `/data/season_#_excel.xlsx`: excel document containing additional organization of above data
 * `/schitts_scripts/`: contains unedited, edited (.docx) and .txt versions of schitt's creek scripts separated by seasons (all scripts sourced from [Forever Dreaming](https://transcripts.foreverdreaming.org/viewforum.php?f=132))
   * unedited: marked with speaker and labelled with sarcastic/rhetorical labels and descriptions
   * edited: paranthesized actions removed, colon delimiters inserted
