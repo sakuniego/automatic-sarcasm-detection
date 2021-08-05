@@ -57,4 +57,5 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 If you have any questions, please don't hesitate to reach out.
 
 Email: egodawatte@wisc.edu
-LinkedIn: linkedin.com/in/sakuni
+
+LinkedIn: [linkedin.com/in/sakuni](https://www.linkedin.com/in/sakuni/)
