@@ -54,6 +54,8 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 ### Referenced Resources
 * [Sentiment Analysis Using Doc2Vec](https://linanqiu.github.io/2015/10/07/word2vec-sentiment/)
 * [Deep Neural Multilayer Perceptron (MLP) with Scikit-learn](https://towardsdatascience.com/deep-neural-multilayer-perceptron-mlp-with-scikit-learn-2698e77155e)
+* [Visualizing Word Vectors with t-SNE](https://www.kaggle.com/jeffd23/visualizing-word-vectors-with-t-sne)
+* [Three-Dimensional Plotting in Matplotlib](https://jakevdp.github.io/PythonDataScienceHandbook/04.12-three-dimensional-plotting.html)
 
 ### Contact
 If you have any questions, please don't hesitate to reach out.
