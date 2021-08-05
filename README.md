@@ -11,6 +11,17 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 ## Data
 * `/data/season_1_plain.csv`: includes..., used as training data for MLPClassifier
 * `/data/season_1_excel.xlsx`: excel document containing additional organization of above data
+* `/schitts_scripts/`: contains unedited, edited (.docx) and .txt versions of schitt's creek scripts separated by seasons (all scripts sourced from [Forever Dreaming](https://transcripts.foreverdreaming.org/viewforum.php?f=132))
+  * unedited: marked with speaker and labelled with sarcastic/rhetorical labels and descriptions
+  * edited: paranthesized actions removed, colon delimiters inserted
+  * txt: converted for easy import into excel (see below instructions)
+
+### Importing .txt into Excel
+1) Open Excel and select Open > Browse
+2) Change file type from "All Excel Files" to "Text Files" and open desired text file
+3) In the Text Import Wizard, under Original dataype, select "Delimited" radio button then hit "Next"
+4) Under Delimiters unselect "Tab" checkbox, and next to "Other" type `:` (colon) then hit "Next"
+5) Hit "Finish"
 
 ## Function Descriptions
 
