@@ -6,6 +6,8 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 2) Install necessary packages in `schitt.py`
 3) Run `schitt.py`
 
+**Recommended IDE**: PyCharm
+
 ## Data
 * `/data/season_1_plain.csv`: includes..., used as training data for MLPClassifier
 * `/data/season_1_excel.xlsx`: excel document containing additional organization of above data
