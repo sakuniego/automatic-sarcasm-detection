@@ -52,6 +52,8 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 * Derek D. Stratton (Grad Advisor, UNR)
 
 ### Referenced Resources
+* [Multi-Class Text Classification with Doc2Vec & Logistic Regression](https://towardsdatascience.com/multi-class-text-classification-with-doc2vec-logistic-regression-9da9947b43f4)
+* [Tutorial: Doc2Vec and t-SNE](http://csmoon-ml.com/index.php/2019/02/15/tutorial-doc2vec-and-t-sne/)
 * [Sentiment Analysis Using Doc2Vec](https://linanqiu.github.io/2015/10/07/word2vec-sentiment/)
 * [Deep Neural Multilayer Perceptron (MLP) with Scikit-learn](https://towardsdatascience.com/deep-neural-multilayer-perceptron-mlp-with-scikit-learn-2698e77155e)
 * [Visualizing Word Vectors with t-SNE](https://www.kaggle.com/jeffd23/visualizing-word-vectors-with-t-sne)
