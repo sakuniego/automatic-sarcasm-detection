@@ -50,3 +50,11 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 **sarcasm detection**: type of sentiment analysis, detecting sarcasm in given text
 
 **sentiment analysis**: determining the emotion (and other subjective features) of a given text
+
+#### Referenced Resources
+
+#### Contact
+If you have any questions, please don't hesitate to reach out.
+
+Email: egodawatte@wisc.edu
+LinkedIn: linkedin.com/in/sakuni
