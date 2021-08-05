@@ -7,8 +7,8 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 3) Run `schitt.py`
 
 ## Data
-* `season_1_plain.csv`: includes..., used as training data for MLPClassifier
-* `season_1_excel.xlsx`: excel document containing additional organization of above data
+* `/data/season_1_plain.csv`: includes..., used as training data for MLPClassifier
+* `/data/season_1_excel.xlsx`: excel document containing additional organization of above data
 
 ## Function Descriptions
 
