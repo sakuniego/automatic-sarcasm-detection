@@ -37,13 +37,6 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 * bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml...
   * Run: `pip install lxml` (in Terminal)
 
-### Credits
-* This research project was funded by the National Science Foundation (IIS-1757929)
-* Sakuni Egodawatte (Undergraduate Researcher, UW-Madison)
-* Emily Hand (Faculty Advisor, UNR)
-* David Feil-Seifer (REU Coordinator, UNR)
-* Derek D. Stratton (Grad Advisor, UNR)
-
 ### Glossary
 **Doc2Vec**: method for turning chunks of text (whole documents or even sentences) into vectors that can be more easily processed by a machine learning model
 
@@ -51,9 +44,16 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 
 **sentiment analysis**: determining the emotion (and other subjective features) of a given text
 
-#### Referenced Resources
+### Credits
+* This research project was funded by the National Science Foundation (IIS-1757929)
+* Sakuni Egodawatte (Undergraduate Researcher, UW-Madison)
+* Emily Hand (Faculty Advisor, UNR)
+* David Feil-Seifer (REU Coordinator, UNR)
+* Derek D. Stratton (Grad Advisor, UNR)
 
-#### Contact
+### Referenced Resources
+
+### Contact
 If you have any questions, please don't hesitate to reach out.
 
 Email: egodawatte@wisc.edu
