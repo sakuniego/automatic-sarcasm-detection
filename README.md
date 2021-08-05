@@ -13,12 +13,14 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 ## Function Descriptions
 
 ## Potential Errors
-* May need to import nltk and do nltk.download(‘punkt’) (in python console)
-* May need to run pip install python-Levenshtein to suppress error
+* May need to `import nltk` and do `nltk.download(‘punkt’)` (in Python Console)
+* May need to run `pip install python-Levenshtein` in Terminal to suppress error
   * If on Linux machine may get error: unable to execute 'x86_64-linux-gnu-gcc': No such file or directory
-    * Run: `sudo apt-get install python3.x-dev`
+    * Run: `sudo apt-get install python3.x-dev` in Terminal
       * x should be replaced with subversion of python (e.g. 8 for python 3.8)
       * Run `python --version` to find current version
+* bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml...
+  * Run: `pip install lxml` in Terminal
 * https://stackoverflow.com/questions/24398302/bs4-featurenotfound-couldnt-find-a-tree-builder-with-the-features-you-requeste
 pip install lxml
 
