@@ -52,6 +52,8 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 * Derek D. Stratton (Grad Advisor, UNR)
 
 ### Referenced Resources
+* [Sentiment Analysis Using Doc2Vec](https://linanqiu.github.io/2015/10/07/word2vec-sentiment/)
+* [Deep Neural Multilayer Perceptron (MLP) with Scikit-learn](https://towardsdatascience.com/deep-neural-multilayer-perceptron-mlp-with-scikit-learn-2698e77155e)
 
 ### Contact
 If you have any questions, please don't hesitate to reach out.
