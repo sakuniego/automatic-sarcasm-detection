@@ -12,6 +12,8 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 
 ## Function Descriptions
 
+## Visualizations
+
 ## Potential Errors
 * May need to `import nltk` and do `nltk.download(‘punkt’)` (in Python Console)
 * May need to run `pip install python-Levenshtein` (in Terminal) to suppress error
