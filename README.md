@@ -21,8 +21,10 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
       * Run `python --version` to find current version
 * bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml...
   * Run: `pip install lxml` in Terminal
-* https://stackoverflow.com/questions/24398302/bs4-featurenotfound-couldnt-find-a-tree-builder-with-the-features-you-requeste
-pip install lxml
 
 ### Credits
-Sakuni Egodawatte (Undergraduate Researcher, UW-Madison), Emily Hand (Faculty Advisor, UNR), David Feil-Seifer (REU Coordinator, UNR), Derek D. Stratton (Grad Advisor, UNR)
+* This research project was funded by the National Science Foundation (IIS-1757929)
+* Sakuni Egodawatte (Undergraduate Researcher, UW-Madison)
+* Emily Hand (Faculty Advisor, UNR)
+* David Feil-Seifer (REU Coordinator, UNR)
+* Derek D. Stratton (Grad Advisor, UNR)
