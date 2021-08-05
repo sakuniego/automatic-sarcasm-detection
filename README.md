@@ -31,5 +31,7 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 
 ### Glossary
 **Doc2Vec**: method for turning chunks of text (whole documents or even sentences) into vectors that can be more easily processed by a machine learning model
+
 **sarcasm detection**: type of sentiment analysis, detecting sarcasm in given text
+
 **sentiment analysis**: determining the emotion (and other subjective features) of a given text
