@@ -135,7 +135,7 @@ def make_tsne(vectors, labels):
     for i in range(len(x)):
         if labels[i] == 1:
             plt.scatter(x[i], y[i], c='red', s=100)
-    plt.savefig('sarcasm_tsne.png', format = "png", transparent = True)
+    plt.savefig('./visualizations/sarcasm_tsne.png', format = "png", transparent = True)
 
 def make_speaker_tsne(vectors, labels, df):
     tsne_model = TSNE(perplexity=40, n_components=2, init='pca', n_iter=2500, random_state=23)
@@ -189,7 +189,7 @@ def make_speaker_tsne(vectors, labels, df):
     for i in range(len(x)):
         if speaker_list[i] == 4:
             plt.scatter(x[i], y[i], c='magenta', s=100)
-    filename = "compare_sarcasm_tsne.png"
+    filename = "./visualizations/compare_sarcasm_tsne.png"
     plt.savefig(filename, format = "png", transparent = True)
 
 def make_3d_tsne(vectors, labels):
@@ -219,7 +219,7 @@ def make_3d_tsne(vectors, labels):
     # TODO: plot separately and make red size bigger
     ax.scatter3D(x_0, y_0, z_0, c = labels, cmap = matplotlib.colors.ListedColormap(colors), s = 20)
     # ax.view_init(120, 30) # change view angle of plot
-    filename = "sarcasm_3d_tsne.png"
+    filename = "./visualizations/sarcasm_3d_tsne.png"
     plt.savefig(filename, format = "png")
 
 def make_learn_vec(model, tag_data):
@@ -253,7 +253,7 @@ def create_mlp(train_vecs, train_labels):
     # print(basic_clf.score(scaled_test_vecs, test_labels))
 
     # fig = plot_confusion_matrix(basic_clf, scaled_test_vecs, test_labels, display_labels = [0, 1])
-    # fig.figure_.suptitle("Schitt's Creek Sarcasm Confusion Matrix")
+    # fig.figure_.suptitle("Sarcasm Confusion Matrix")
     # plt.show()
 
 def individual_mlp(speaker, df_train): # TODO: Add df_test
@@ -267,7 +267,7 @@ def individual_mlp(speaker, df_train): # TODO: Add df_test
     tag_train = df_train.apply(lambda r: TaggedDocument(words=tokenize(r['line']), tags=[r.tag]), axis=1)
     # tag_test = df_test.apply(lambda r: TaggedDocument(words = tokenize(r['line']), tags = [r.tag]), axis = 1)
 
-    filename = "d2v_" + speaker.lower() + ".model"
+    filename = "./models/d2v_" + speaker.lower() + ".model"
     model = create_model(tag_train)
     model.save(filename)
 
@@ -292,7 +292,7 @@ def individual_mlp(speaker, df_train): # TODO: Add df_test
 
 def main():
     # 1. DATA INITIALIZATION
-    in_csv = "season_1_plain.csv" # csv containing data
+    in_csv = "./data/season_1_plain.csv" # csv containing data
     in_df = parse(in_csv)
     new_df = in_df
 
@@ -331,14 +331,14 @@ def main():
     ''' 
     print("STATUS UPDATE: Creating and training model...")
     start_time_3 = time.time()
-    filename = "d2v_schitt.model"
+    filename = "./models/d2v_schitt.model"
     model = create_model(tag_train)
     model.save(filename)
     print("Took <%s minutes to create/train model\n" % math.ceil((time.time() - start_time_3)/60))
     '''
 
     # 3. USING MODEL
-    model = Doc2Vec.load("d2v_schitt.model") # loading existing model #TODO: replace with filename
+    model = Doc2Vec.load("./models/d2v_schitt.model") # loading existing model #TODO: replace with filename
     print("STATUS UPDATE: Loaded pre-trained model\n")
 
     # Find similar words...
@@ -373,6 +373,7 @@ def main():
     # turning vectors into comma-separated string to create updated csv w/ vectors
     vecs = []
 
+    # TODO: why is there a blank line at the end of result file?
     for i in range(lines):
         j = 0
         str_rep = ""
@@ -387,11 +388,11 @@ def main():
     #print(new_df)
     #print(model['TRAIN_0_1'])
 
-    new_df.to_csv("train_and_vectors") # saving to file
+    new_df.to_csv("./data/train_and_vectors") # saving to file
 
     print("Creating t-SNE models...")
     # Printing t-SNE model
-    # make_tsne(train_vecs, train_labels)
+    make_tsne(train_vecs, train_labels)
     # make_speaker_tsne(train_vecs, train_labels, in_df)
     # make_3d_tsne(train_vecs, train_labels)
 

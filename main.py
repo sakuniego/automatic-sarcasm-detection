@@ -1,4 +1,3 @@
-# import packages
 import torch
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
@@ -13,4 +12,4 @@ class SarcasmDataset(Dataset):
         return len(self.train_data)
 
     def __getitem__(self, item):
-        return self.train_data.iloc[item]  # turn to tensor before returning (using Doc2Vec)
+        return self.train_data.iloc[item]  # turn to tensor before returning (word2vec?)

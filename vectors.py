@@ -95,12 +95,26 @@ def similar_words(model, word):
               round(model.wv.most_similar(word)[i][1],4))
         i += 1
 
+# referenced csmoon-ml
+def make_scatter():
+    fig = plt.figure(figsize=(10, 15))
+    ax = fig.add_subplot(1, 1, 1)
+
+    pos_found_x = []
+    pos_found_y = []
+    found_names = []
+
+    pos_rest_x = []
+    pos_rest_y = []
+
+
+
 def make_learn_vec(model, tag_data):
     vals = tag_data.values
     targets, regressors = zip(*[(post.tags[0], model.infer_vector(post.words, steps = 20)) for post in vals])
     return targets, regressors
 
-def create_model(tag_train):
+def create_model(tag_train): # rename to create_d2v_model
     max_epochs = 10
     global model  # defining as global var so accessible outside of this func TODO: might be a bad idea
     model = Doc2Vec(workers = cores) # using dbow
@@ -110,6 +124,11 @@ def create_model(tag_train):
 
     model.save("d2v_sarc.model")
 
+def create_mlp():
+    # save results of d2v model in main
+    # do train test split
+
+    print("null")
 
 def main():
     # 1. DATA INITIALIZATION
