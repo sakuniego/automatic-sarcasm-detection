@@ -1,3 +1,11 @@
+"""
+Filename: schitt.py
+Description:
+Author: Sakuni Egodawatte
+Last Updated: 08/05/2021
+
+"""
+
 # import packages
 import matplotlib
 import nltk
@@ -227,7 +235,7 @@ def make_learn_vec(model, tag_data):
     targets, regressors = zip(*[(post.tags[0], model.infer_vector(post.words, steps = 20)) for post in vals])
     return targets, regressors
 
-def create_model(tag_train): # rename to create_d2v_model
+def create_d2v_model(tag_train): # rename to create_d2v_model
     max_epochs = 10
     # global model  # defining as global var so accessible outside of this func TODO: might be a bad idea
     model = Doc2Vec(workers = cores) # using dbow
@@ -268,7 +276,7 @@ def individual_mlp(speaker, df_train): # TODO: Add df_test
     # tag_test = df_test.apply(lambda r: TaggedDocument(words = tokenize(r['line']), tags = [r.tag]), axis = 1)
 
     filename = "./models/d2v_" + speaker.lower() + ".model"
-    model = create_model(tag_train)
+    model = create_d2v_model(tag_train)
     model.save(filename)
 
     model = Doc2Vec.load(filename)
@@ -290,62 +298,71 @@ def individual_mlp(speaker, df_train): # TODO: Add df_test
 
     # create_mlp(train_vecs, train_labels)
 
+"""
+Description: initializes and runs functions for Schitt's Creek data initialization, visualization and analysis and
+records to time taken for each section
+"""
 def main():
     # 1. DATA INITIALIZATION
-    in_csv = "./data/season_1_plain.csv" # csv containing data
-    in_df = parse(in_csv)
-    new_df = in_df
+    # Desc: Importing, visualizing, cleaning data, storing in dataframes and tokenizing
+    train_csv = "./data/season_1_plain.csv" # csv containing test data
+    test_csv = "./data/season_2_plain.csv" # csv containing train data
+    train_df = parse(train_csv)
+    test_df = parse(test_csv)
+    # used for creating new csv files w/ d2v vectors:
+    train_vecs_df = train_df
+    test_vecs_df = test_df
 
-    # raw_data_vis(in_df) # shows details about the raw data count
-    # print_post(in_df, 0) # replace second parameter with integer within [0, 1010825]
+    # raw_data_vis(train_df) # shows details about the raw data count
+    # print_post(train_df, 0) # replace second parameter with integer within [0, 1010825]
 
-    start_time_1 = time.time()
-    print("STATUS UPDATE: Cleaning text...")
+    start_time_1 = time.time()  # used to calculate length of time to perform below task
+    print("STATUS UPDATE: Cleaning data...\n")
 
-    in_df = in_df.fillna("na") # TODO: did to avoid TypeError, INSTEAD DELETE NULL VALUES IN PARSE AND REMOVE THIS
-    in_df['line'] = in_df['line'].apply(clean_txt)
+    # done to avoid TypeError, fills all blank values w/ "na" (deleting null vals would delete valid data)
+    train_df = train_df.fillna("na")
+    test_df = test_df.fillna("na")
+    train_df['line'] = train_df['line'].apply(clean_txt) # clean text
+    test_df['line'] = test_df['line'].apply(clean_txt)
 
-    # printing how long process took (in minutes rounded up)
-    print("Took <%s minutes to clean text\n" % math.ceil((time.time() - start_time_1)/60))
+    # how long above task took (in minutes rounded up)
+    print("Took <%s minutes to clean data\n" % math.ceil((time.time() - start_time_1)/60))
 
-    # 2. MODEL CREATION
-    # Preparing data...
     start_time_2 = time.time()
-    print("STATUS UPDATE: Tokenizing data...")
+    print("STATUS UPDATE: Tokenizing data...\n")
 
-    # Splitting data into training and testing sets
-    # train, test = train_test_split(in_df, test_size = 0.3, random_state = 42)
-    train = in_df
-    # test = test_df # TODO: replace with name of testing file
+    # tagging script line with tag col
+    tag_train = train_df.apply(lambda r: TaggedDocument(words=tokenize(r['line']), tags=[r.tag]), axis=1)
+    tag_test = test_df.apply(lambda r: TaggedDocument(words=tokenize(r['line']), tags=[r.tag]), axis=1)
 
-    # how can parent comment factor in?
-    #TODO: should tags be unique? multiple tags?
-    tag_train = train.apply(lambda r: TaggedDocument(words = tokenize(r['line']), tags = [r.tag]), axis = 1)
-    #tag_test = test.apply(lambda r: TaggedDocument(words = tokenize(r['line']), tags = [r.tag]), axis = 1)
+    print("Took <%s minutes to tokenize data\n" % math.ceil((time.time() - start_time_2) / 60))
 
-    print("Took <%s minutes to tokenize data\n" % math.ceil((time.time() - start_time_2)/60))
+    # print(tag_train.values[0]) # Uncomment to see what tagged data looks like
 
-    # print(tag_train.values[0]) # TODO: Remove
-
-    # Model creation... TODO: comment out
-    ''' 
-    print("STATUS UPDATE: Creating and training model...")
-    start_time_3 = time.time()
+    # 2. D2V MODEL CREATION
+    # Desc: Creating Doc2Vec model and saving
     filename = "./models/d2v_schitt.model"
-    model = create_model(tag_train)
+
+    # TODO: Uncomment to update model
+    ''' 
+    print("STATUS UPDATE: Creating and training model...\n")
+    start_time_3 = time.time()
+    
+    model = create_d2v_model(tag_train)
     model.save(filename)
+    
     print("Took <%s minutes to create/train model\n" % math.ceil((time.time() - start_time_3)/60))
     '''
 
     # 3. USING MODEL
-    model = Doc2Vec.load("./models/d2v_schitt.model") # loading existing model #TODO: replace with filename
-    print("STATUS UPDATE: Loaded pre-trained model\n")
+    model = Doc2Vec.load(filename) # loading existing model
+    print("STATUS UPDATE: Loaded pre-existing model\n")
 
     # Find similar words...
     #word = "motel" # change this to the word you'd like to see
     #similar_words(model, word)
 
-    #print(len(model['TRAIN_0_1'])) #TODO:should remove
+    #print(len(model['TRAIN_0_0'])) #TODO:should remove
 
     # Training classifier... (log reg)
     print("STATUS UPDATE: Training classifier...")
@@ -384,20 +401,20 @@ def main():
             j = j + 1
         vecs.append(str_rep)
 
-    new_df['vectors'] = vecs # creating new col containing vectors
-    #print(new_df)
+    train_vecs_df['vectors'] = vecs # creating new col containing vectors
+    #print(train_vecs_df)
     #print(model['TRAIN_0_1'])
 
-    new_df.to_csv("./data/train_and_vectors") # saving to file
+    train_vecs_df.to_csv("./data/train_and_vectors") # saving to file
 
     print("Creating t-SNE models...")
     # Printing t-SNE model
     make_tsne(train_vecs, train_labels)
-    # make_speaker_tsne(train_vecs, train_labels, in_df)
+    # make_speaker_tsne(train_vecs, train_labels, train_df)
     # make_3d_tsne(train_vecs, train_labels)
 
     # creating actual models
     # create_mlp(train_vecs, train_labels) # TODO: Store result and print return value
-    individual_mlp("David", in_df)
+    individual_mlp("David", train_df)
 
 main() # run main function
