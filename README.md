@@ -39,6 +39,7 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 
 ## Things to Try
 * Take label descriptions (under desc heading) into consideration for a model
+* Differentiate between sarcastic and rhetorical during classification
 
 ### Glossary
 **Doc2Vec**: method for turning chunks of text (whole documents or even sentences) into vectors that can be more easily processed by a machine learning model  
