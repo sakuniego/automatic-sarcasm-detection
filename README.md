@@ -26,7 +26,11 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 ## Function Descriptions
 
 ## Visualizations
-<img align="center" src="/visualizations/sarcasm_tsne.png" alt="Sarcasm t-SNE plot" width="200"/>
+<img src="/visualizations/sarcasm_tsne.png" alt="Sarcasm t-SNE plot" width="400"/>
+<figure>
+  <img src="/visualizations/sarcasm_tsne.png" alt="Sarcasm t-SNE plot" width="400"/>
+  <figcaption>Vis. 1 - t-SNE plot of sarcastic utterances (red) vs. non-sarcastic (grey)</figcaption>
+</figure>
 
 ## Potential Errors
 * May need to `import nltk` and do `nltk.download(‘punkt’)` (in Python Console)
