@@ -30,7 +30,7 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
  <img src="/visualizations/sarcasm_tsne.png" alt="Sarcasm t-SNE plot" width="400"/>
  <figcaption><em><b>Vis. 1</b>: t-SNE plot of sarcastic utterances (red) vs. non-sarcastic (grey)</em></figcaption>
 </figure>
-
+<br>
 <figure>
  <img src="/visualizations/sarcasm_confusion_matrix.png" alt="Sarcasm confusion matrix plot" width="400"/>
  <figcaption><em><b>Vis. 2</b>: Confusion matrix for MLPClassifier, 1 indicating sarcastic utterances</em></figcaption>
