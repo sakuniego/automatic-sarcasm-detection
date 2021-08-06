@@ -56,11 +56,11 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 **sentiment analysis**: determining the emotion (and other subjective features) of a given text
 
 ### Credits
-* This research project was funded by the National Science Foundation (IIS-1757929)
 * Sakuni Egodawatte (Undergraduate Researcher, UW-Madison)
 * Emily Hand (Faculty Advisor, UNR)
 * David Feil-Seifer (REU Coordinator, UNR)
 * Derek D. Stratton (Grad Advisor, UNR)
+* This research project was done under the HRI REU Site in the Computer Science and Engineering Department at the University of Nevada, Reno and was funded by the National Science Foundation (IIS-1757929)
 
 ### Referenced Resources
 * [Multi-Class Text Classification with Doc2Vec & Logistic Regression](https://towardsdatascience.com/multi-class-text-classification-with-doc2vec-logistic-regression-9da9947b43f4) by Susan Li
