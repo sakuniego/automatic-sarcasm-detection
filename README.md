@@ -1,5 +1,5 @@
 # Automatic Sarcasm Detection with Schitt's Creek
-by **Sakuni Egodawatte** (Undergraduate Researcher, UW-Madison) and Emily Hand (Faculty Advisor, UNR)
+by **Sakuni Egodawatte** (Undergraduate Researcher, UW-Madison) and **Emily Hand** (Faculty Advisor, UNR)
 
 Basic classification model using novel data from the comedy show *Schitt's Creek* (seasons 1 and 2) to perform sarcasm detection. Implemented with gensim's Doc2Vec and scikit-learn's MLPClassifier.
 
