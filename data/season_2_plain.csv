@@ -1,0 +1,259 @@
+indx,tag,speaker,line,label,desc,bin_label
+0,TEST_0_0,Moira," No, no, no! No, no, no! No! Noooo! ",,,0
+1,TEST_0_1,Johnny, What? ,,,0
+2,TEST_0_2,Moira, My bag! It's gone! ,,,0
+3,TEST_0_3,Johnny, What bag? ,,,0
+4,TEST_0_4,Moira, My brown bag! ,,,0
+5,TEST_0_5,Johnny," What brown bag?You had a room full of brown bags back home, which brown bag?! ",,,0
+6,TEST_0_6,Moira," My crocodile bag, the one my mother gave me! ",,,0
+7,TEST_0_7,Johnny," Oh, it's in the closet, next to my briefcase. ",,,0
+8,TEST_0_8,Moira, That's an ostrich bag. ,,,0
+9,TEST_0_9,Johnny," Okay, just calm down, breathe, breathe. Breathe... breathe! ",,,0
+10,TEST_1_10,Moira," Okay... David! David must've taken it, along with my last molecule of hope! ",SARCASTIC, Moira is being dramatic,1
+11,TEST_0_11,Johnny," Oh Moira, David only took his own bags. ",,,0
+12,TEST_0_12,Moira," Are you kidding?! I bet he's pawned it by now, to pay for manicures. ",,,0
+13,TEST_0_13,Johnny," What possible sense would it make for David to take one of your bags? It doesn't... oh towels, great. ",,,0
+14,TEST_0_14,Stevie," Mrs. Rose, you got out of bed. ",,,0
+15,TEST_0_15,Moira, Humph! ,,,0
+16,TEST_0_16,Stevie," Sorry, am I interrupting something? ",,,0
+17,TEST_0_17,Johnny," No, no, we're just, we're looking for something valuable, and um... ",,,0
+18,TEST_0_18,Stevie, Your son? ,,,0
+19,TEST_0_19,Johnny," Well, no, a brown bag, as a matter of fact. Well... our son, yes. ",,,0
+20,TEST_0_20,Stevie, Has anyone heard from David? ,,,0
+21,TEST_0_21,Moira," Oh, to be so naive! He's long gone, darling, escaped, and left us all behind. ",,,0
+22,TEST_0_22,Stevie," Okay, well uh... I've put in some calls to some people, just to get the word out. ",,,0
+23,TEST_0_23,Johnny," Well, that's very nice. That's, very nice Stevie, thank you very much. That's, very considerate, because I know you and David had a...  Intimate uh, relationship. ",,,0
+24,TEST_0_24,Stevie," Okay, I just came to drop off the towels, and check in, so. ",,,0
+25,TEST_0_25,Alexis, Is that Stevie? Can you ask her if she has any extra bedspreads? ,,,0
+26,TEST_0_26,Stevie, I'm still here! ,,,0
+27,TEST_0_27,Alexis," Oh! Okay, then come here then, please, for a sec? ",,,0
+28,TEST_0_28,Johnny," Yeah, um, come in. ",,,0
+29,TEST_0_29,Alexis," Hey, does this place have any king sized sheets? ",,,0
+30,TEST_0_30,Johnny," Alexis, what the hell are you doing?! ",,,0
+31,TEST_0_31,Alexis," Just giving myself some more space. There's a lot going on in my life right now. Like, Ted keeps harassing me for an answer to the whole, am I gonna marry him thing, and then there's the whole Mutt issue, which is very complicated, and sexy, so I'm just, I don't know what to do. ",,,0
+32,TEST_0_32,Stevie, I take it you haven't heard from David. ,,,0
+33,TEST_0_33,Alexis," Okay, yeah, fine. And David's missing. So... ",,,0
+34,TEST_0_34,Johnny," Yeah, well, he's missing. ",,,0
+35,TEST_1_35,Johnny," Well, I can't find him, so what would you say he is? ",RHETORICAL, Johnny is frustrated and explaining the word �missing� in plain words,1
+36,TEST_0_36,Johnny," Okay, you know what? You know what?! I don't think your mother would appreciate you speaking to me in that way! Well, I'm-I'm sorry for your loss. ",,,0
+37,TEST_0_37,Moira, Oh! What'd they say! ,,,0
+38,TEST_0_38,Johnny," Nothing, and I'm getting nervous, Moira. ",,,0
+39,TEST_0_39,Moira," Don't worry, he's fine. It's not the first time David's run away, remember all those troubled years in high school, when he'd charter the jet without permission?",,,0
+40,TEST_0_40,Johnny," Yes, but he has no money.",,,0
+41,TEST_0_41,Moira," Oh, he does now. If there's one thing David knows, it's the street value of a woman's bag.",,,0
+42,TEST_0_42,Johnny," Okay, you know what, can we stop talking about that bag for five minutes, the bag, the bag, and the bag!",,,0
+43,TEST_0_43,Moira," John, it's an heirloom, my great grandmother took it from her husband when she left him, and it has been passed down through all the women in my family, as emergency currency, in case we need to leave our husbands in the middle of the night.",,,0
+44,TEST_1_44,Johnny," Oh, well, that's reassuring. ",SARCASTIC, Johnny does not like hearing that Moira may leave him in the middle of the night,1
+45,TEST_0_45,Moira," You don't have to worry darling, I'll never need it. But you know Alexis will!",,,0
+46,TEST_0_46,Johnny," Yeah, more than once, probably.",,,0
+47,TEST_0_47,Moira," I love that bag. And I've kept it safe all these years. And now John, it's out there, frightened, and alone...",,,0
+48,TEST_0_48,Johnny," Okay, okay. We'll find it, we'll find your bag. We'll find your bag, Moira.",,,0
+49,TEST_0_49,Moira," Oh, we better, please!",,,0
+50,TEST_0_50,Johnny," Yes, we will.",,,0
+51,TEST_0_51,Moira, Please!,,,0
+52,TEST_0_52,Alexis," Hey, uh, I really shouldn't come in.",,,0
+53,TEST_0_53,Mutt," Actually, you're standing in my living room, you let yourself in.",,,0
+54,TEST_0_54,Alexis," Yeah, no, I know. Um, so, about the other night...",,,0
+55,TEST_0_55,Mutt, Uh huh.,,,0
+56,TEST_0_56,Alexis, Oh! Mm! That night. Um... that was super fun.,,,0
+57,TEST_0_57,Mutt, I'd say it was the most fun I had all year.,,,0
+58,TEST_0_58,Alexis," Yeah, it was super fun.",,,0
+59,TEST_0_59,Mutt," Actually, I wouldn't mind having a little more fun, right now.",,,0
+60,TEST_0_60,Alexis," Okay... And I love hearing you say that. It's just that, when we got together, um, I thought my family was leaving.",,,0
+61,TEST_0_61,Mutt, Uh huh.,,,0
+62,TEST_0_62,Alexis, And now we're not. So...,,,0
+63,TEST_1_63,Mutt," I would love to feel worse about your parents not selling the town, but... ",SARCASTIC," Mutt is exaggerating saying �love�, he is happy that Alexis is staying",1
+64,TEST_0_64,Alexis," Hmm, it's just, it's so tragic, 'cause my mom is in this like, waking coma, and my dad has developed more of a stutter, and uh, because we're not leaving, things are a little bit complicated with Ted. ",,,0
+65,TEST_0_65,Mutt, I thought things were done with Ted.,,,0
+66,TEST_0_66,Alexis," Me too. But apparently, he was misinformed.",,,0
+67,TEST_0_67,Mutt, By who?,,,0
+68,TEST_0_68,Alexis, By me.,,,0
+69,TEST_0_69,Mutt, Okay.,,,0
+70,TEST_0_70,Alexis," Until that whole thing kinda works itself out, I have a moral obligation to Ted. You hands are so� Soft for someone who does nothing but manual labor.",,,0
+71,TEST_0_71,Mutt," Thanks, I make sure to moisturize.",,,0
+72,TEST_0_72,Alexis," Mm, that's so important. So important.",,,0
+73,TEST_0_73,Mutt, Listen... I can wait.,,,0
+74,TEST_0_74,Alexis, Thank you.,,,0
+75,TEST_0_75,Mutt, Uh huh.,,,0
+76,TEST_0_76,Alexis," So um... So, you look really good today.",,,0
+77,TEST_1_77,Roland," Oh, hello, Roses. What, are you here to tell me Alexis has skipped town with my lawn mower?! ",RHETORICAL," Roland is bitter about David taking his truck and leaving, so he is joking about it",1
+78,TEST_0_78,Jocelyn," Roland, these people have literally hit rock bottom, they're not in the mood for your jokes right now.",,,0
+79,TEST_0_79,Roland, She is.,,,0
+80,TEST_0_80,Johnny," Look, I've been on the phone all morning with missing persons, and just wondering if you've heard anything?",,,0
+81,TEST_0_81,Jocelyn," No. Come in, come on in. I can't imagine the stress of losing a child.",,,0
+82,TEST_0_82,Moira," Oh, I haven't lost him, i know exactly where he is. He's enjoying happy hour at the viceroy without me.",,,0
+83,TEST_0_83,Johnny, It's been three days without any contact.,,,0
+84,TEST_0_84,Roland," Johnny, you wouldn't know this, but statistics tell us you have a 48 hour window before you can assume somebody is dead.",,,0
+85,TEST_0_85,Johnny," Yeah, I just said it's been three days.",,,0
+86,TEST_0_86,Roland, Then do we call off the search?,,,0
+87,TEST_0_87,Johnny, Oh my God!,,,0
+88,TEST_0_88,Roland," I'll get it. Roland Schitt. Yes. Yes! Yes! Oh-oh. Okay. Uh-huh, yeah. I'm good, how about you? Terrific. Great, where? Uh-huh. Uhhhh-huh! I got it, great, we'll see you there this afternoon. Bye. Well, good news, folks! They found the truck.",,,0
+89,TEST_0_89,Moira, And David.,,,0
+90,TEST_0_90,Roland," Well, that didn't come up.",,,0
+91,TEST_0_91,Johnny," Well, didn't you ask?",,,0
+92,TEST_0_92,Roland," Johnny, they were all excited about telling me they found the truck, so...",,,0
+93,TEST_0_93,Johnny, Call him back!,,,0
+94,TEST_0_94,Moira, Call him back. Now!,,,0
+95,TEST_0_95,Johnny, Call him back!,,,0
+96,TEST_0_96,Roland," Well, I I don't have the number, I've got the address.",,,0
+97,TEST_0_97,Jocelyn," I'm sure David is with the truck, right, Roland?",,,0
+98,TEST_0_98,Roland," Well, I think they would've told me if there's a dead body with the truck, honey.",,,0
+99,TEST_0_99,Moira, Oh!,,,0
+100,TEST_0_100,Johnny, Just give us the address! Give me the address!,,,0
+101,TEST_0_101,Moira, Did they mention bags?,,,0
+102,TEST_0_102,Roland," Well, no talk of bags.",,,0
+103,TEST_0_103,Moira, Were there bags in the truck?,,,0
+104,TEST_0_104,Twyla," My best friend in kindergarten ran away, and her parents didn't notice, and she ended up getting adopted by this really rich Asian family in Vancouver, but then they had their own kid, so she kind of got neglected a bit, and I can't remember whether she's back on the streets now, or...",,,0
+105,TEST_0_105,Alexis," You know, and he took his hair straightener, which he knows that i use more than he does. This whole thing is just very selfish.",,,0
+106,TEST_0_106,Ted, Alexis!,,,0
+107,TEST_0_107,Alexis," Ted! Oh my God, hi.",,,0
+108,TEST_0_108,Ted, Hey.,,,0
+109,TEST_0_109,Alexis, Hey.,,,0
+110,TEST_0_110,Ted, Um... I've been calling.,,,0
+111,TEST_0_111,Alexis," I know, I know. But everything's just been so hectic, what with David missing, and like, I haven't been sleeping, and I haven't been eating, and...",,,0
+112,TEST_0_112,Twyla, You just ordered the parfait.,,,0
+113,TEST_0_113,Alexis, And I just keep picturing him at the bottom of a lake.,,,0
+114,TEST_0_114,Ted," Oh, no, that guy was like, a known alcoholic, and they pulled him out a week ago.",,,0
+115,TEST_0_115,Alexis, Thank God you're here!,,,0
+116,TEST_1_116,Ted," Of course, I've been trying to be here more for you, but I guess my texts haven't been getting through, or maybe I'm sending them wrong? ",RHETORICAL, Ted likely knows that Alexis has deliberately not been answering his texts,1
+117,TEST_0_117,Alexis, That's so sweet.,,,0
+118,TEST_0_118,Ted," Uh, here. Listen. I don't want to apply any pressure to the whole marriage thing, but...",,,0
+119,TEST_0_119,Alexis," Thank you, Ted, 'cause it's so hard to focus on something like that right now.",,,0
+120,TEST_0_120,Ted," And I totally understand that. It's just... you had said that you wanted to get married if you weren't leaving town, and you didn't leave town, so...",,,0
+121,TEST_0_121,Alexis," Mm-hmm, mm-hmm. And I totally get that. Technically though, someone did leave, and so the dust just hasn't really settled on the whole... us leaving thing. Yet.",,,0
+122,TEST_0_122,Ted, Right.,,,0
+123,TEST_0_123,Alexis, But obviously I want to be with you! I'm just so scared.,,,0
+124,TEST_0_124,Ted," What, about David, or about being with...",,,0
+125,TEST_0_125,Alexis," Yeah, that.",,,0
+126,TEST_0_126,Johnny, All we know is the truck ran out of gas on an amish farm.,,,0
+127,TEST_0_127,Stevie, So David has been living on an amish farm for three days?,,,0
+128,TEST_0_128,Johnny, We think so.,,,0
+129,TEST_0_129,Stevie, I really hope you're right.,,,0
+130,TEST_0_130,Moira," Stevie dear, now don't take this the wrong way, but, is this car your home?",,,0
+131,TEST_0_131,Stevie, Excuse me?,,,0
+132,TEST_0_132,Moira, I take it you're finished with this sandwich.,,,0
+133,TEST_0_133,Stevie," Yeah. Yeah, thanks. Oh yeah! Um, but there's donuts under the seat, those are still good. Oh. Okay.",,,0
+134,TEST_0_134,Johnny," Alexis, we think we found your brother! Come on!",,,0
+135,TEST_0_135,Alexis," I'm just super tired from walking, though.",,,0
+136,TEST_0_136,Ted," Babe, you're tired because you were stressed about David, but they found him, you should go.",,,0
+137,TEST_0_137,Johnny, Alexis! ,,,0
+138,TEST_0_138,Alexis, I know!,,,0
+139,TEST_0_139,Moira," This is exactly what David wants. All of us worried, and driving around in some tin can looking for him It's a tactic. It's subterfuge.",,,0
+140,TEST_0_140,Johnny," Oh, you could be jumping to conclusions, Moira.",,,0
+141,TEST_0_141,Moira," I taught him everything he knows. He shouldn't have left me behind, that was never part of the plan.",,,0
+142,TEST_1_142,Alexis," Oh my God, ever since David left, you two have been so dramatic. Do I have to remind you of the time that I was taken hostage on David geffen's yacht by Somali pirates for a week, and nobody answered my texts?! ",RHETORICAL," Alexis is using this question to remind her family of this story, she doesn�t expect an answer",1
+143,TEST_0_143,Moira," I had just had my eyelashes dyed, everything was cloudy!",,,0
+144,TEST_1_144,Johnny," Okay, can we all focus here? For a moment?! ",RHETORICAL, Johnny is asking them to focus in question form,1
+145,TEST_0_145,Johnny, David has spent the last three days on a farm. With the amish!,,,0
+146,TEST_0_146,Alexis, Ugh!,,,0
+147,TEST_0_147,Moira, Oh! Thank God.,,,0
+148,TEST_0_148,Alexis, David!,,,0
+149,TEST_0_149,Johnny, David!,,,0
+150,TEST_0_150,Moira," David, I'm here!",,,0
+151,TEST_0_151,Johnny," David, it's us!",,,0
+152,TEST_0_152,David, I know!,,,0
+153,TEST_0_153,Moira," David, come here, please!",,,0
+154,TEST_0_154,David," Stop yelling, David! You come here!",,,0
+155,TEST_0_155,Johnny, We've come to take you home!,,,0
+156,TEST_0_156,David, Three days later!,,,0
+157,TEST_0_157,Moira, Nobody knew where you were! And your phone was off!,,,0
+158,TEST_0_158,David, I texted Alexis!,,,0
+159,TEST_0_159,Alexis," Wha? I'm sorry for not responding to like, one text, David!",,,0
+160,TEST_0_160,Moira," I was worried sick, dear! Where's David, or his bags?",,,0
+161,TEST_0_161,Alexis, David?,,,0
+162,TEST_0_162,David, What?!,,,0
+163,TEST_0_163,Alexis," Okay, you remember Mutt?",,,0
+164,TEST_0_164,David, Yeah!,,,0
+165,TEST_0_165,Alexis," Okay, it's gotten more complicated!",,,0
+166,TEST_0_166,David, What happened?,,,0
+167,TEST_0_167,Alexis, We slept together!,,,0
+168,TEST_0_168,David, Ooh...,,,0
+169,TEST_0_169,Johnny," Okay Alexis, we can talk about this on the ride home.",,,0
+170,TEST_0_170,Moira," David, let us help you with your bags!",,,0
+171,TEST_0_171,David, What if I'm not ready to come home?!,,,0
+172,TEST_0_172,Guest, There's a bug on your dress.,,,0
+173,TEST_0_173,David, Ew!  Ugh! Oh!,,,0
+174,TEST_0_174,David," Miriam makes the most delicious butter. Yeah, I mean, she starts pounding that cream about a half hour too early in the morning, but it tastes exactly like the butter we had at the Ritz in Paris, you know, that sort of... Salt-less butter.",,,0
+175,TEST_0_175,Johnny," Well, once again, thank you for nurturing our David during such a difficult time.",,,0
+176,TEST_0_176,Guest," Well, we should be thanking you for coming. We've spent two sleepless nights, wondering what would happen if nobody came. Would we be stuck with him?!",,,0
+177,TEST_0_177,Moira," Oh, my baby! Thank you, thank you! I would give you a gratuity, but... I'm short about a million this week.",,,0
+178,TEST_0_178,Guest," David's stay here has taught us some valuable lessons in patience, forgiveness...",,,0
+179,TEST_0_179,Guest," Restraint. Well it seems you've taken very good care of our possessions, I hope it wasn't too much of an imposition.",,,0
+180,TEST_0_180,David," You know, I'm not sure I'm even ready to come home yet.",,,0
+181,TEST_0_181,Guest, And yet your time with us has come to an end.,,,0
+182,TEST_0_182,David, Okay.,,,0
+183,TEST_0_183,Guest," These three days you spent with us David, will remain in our memories for many days, and many, many, many nights.",,,0
+184,TEST_0_184,David," Thank you for your kindness, when no one else showed me kindness. And compassion, when no one else showed...",,,0
+185,TEST_0_185,Johnny," Excuse me son, uh... I imagine it's customary for strangers to partake in a good, old fashioned amish lunch?",,,0
+186,TEST_0_186,Guest, Not always. Have a safe trip.,,,0
+187,TEST_0_187,David, Oh! Okay. Thank you. Thanks.,,,0
+188,TEST_0_188,Johnny," Yeah, thank-thank you.",,,0
+189,TEST_0_189,David, Where are we?,,,0
+190,TEST_1_190,Johnny, Do you know how many times I've had to apologize to Roland? ,RHETORICAL, Johnny is emphasizing that he has had to apologize many times,1
+191,TEST_0_191,Johnny," You can't just leave with other people's trucks, David! What were you thinking?",,,0
+192,TEST_0_192,Moira," What you did was impulsive, capricious and melodramatic. But it was also wrong.",,,0
+193,TEST_0_193,David," Okay, nobody freaked out when Alexis went missing!",,,0
+194,TEST_0_194,Alexis," I didn't go missing, David. The FBI knew where I was the entire time.",,,0
+195,TEST_0_195,Johnny," All right listen, the important thing is, we have David back, we have your bag back, and here we are, all together.",,,0
+196,TEST_0_196,David, What bag?,,,0
+197,TEST_0_197,Moira," You stole my bag, David.",,,0
+198,TEST_0_198,David," That bag? That bag looks like it hasn't been used in a hundred years, so I put my toiletries in it.",,,0
+199,TEST_0_199,David, Why would you think that i would steal that bag? ,,,0
+200,TEST_0_200,Moira," I don't know David, why did you steal my eyeliner?",,,0
+201,TEST_0_201,David," That was a phase in high school! Now, did you come for me, or did you come for that bag?",,,0
+202,TEST_0_202,Moira, This was my grandmother's bag!,,,0
+203,TEST_0_203,Johnny, We came for you!,,,0
+204,TEST_1_204,David," I hitchhiked, in the middle of the night, wearing all black! I was basically asking to get hit by a car! ",SARCASTIC, ,1
+205,TEST_0_205,Moira, Why?,,,0
+206,TEST_0_206,Alexis," You told me that Diane Sawyer gave you that bag, and that it was fake.",,,0
+207,TEST_0_207,Moira, I didn't want you taking it.,,,0
+208,TEST_0_208,Alexis," Okay, because I have told a lot of people that Diane Sawyer sells fake bags on the down-low.",,,0
+209,TEST_0_209,David, I slept in the cab of a truck! Overnight!,,,0
+210,TEST_0_210,Alexis," Oh my God, who hasn't, David!",,,0
+211,TEST_0_211,Stevie, Hmm.,,,0
+212,TEST_0_212,David, Hi.,,,0
+213,TEST_0_213,Stevie, What can I...,,,0
+214,TEST_0_214,David, How are-yeah.,,,0
+215,TEST_0_215,Stevie, What?,,,0
+216,TEST_0_216,David, Um... I come bearing gifts.,,,0
+217,TEST_1_217,Stevie," Oh, how generous of you. ",SARCASTIC," Giving Stevie back her own car keys was not a gift, Stevie is unimpressed",1
+218,TEST_0_218,David, I think your car might need a bit of a clean.,,,0
+219,TEST_1_219,Stevie, Is that a dead squirrel on your hood? ,RHETORICAL, Stevie is saying this to insult David�s clothing,1
+220,TEST_0_220,David," They said that you have been calling around, asking for me, which i thought was very nice of you.",,,0
+221,TEST_0_221,Stevie," Oh, well, I didn't.",,,0
+222,TEST_0_222,David," Hmm, well, they said that you were.",,,0
+223,TEST_0_223,Stevie," Well, they were mistaken.",,,0
+224,TEST_0_224,David," Oh, okay.",,,0
+225,TEST_0_225,Stevie," In fact, I was hoping you wouldn't come back.",,,0
+226,TEST_0_226,David," Wow, believe it or not, that is one of the warmest welcomes I have received so far!",,,0
+227,TEST_0_227,Stevie," Usually when you tell someone that you have feelings for them, and the next thing they do is drive out of town with no plan to return, you hope you never have to see them again.",,,0
+228,TEST_0_228,David," Well, in my defense, um... I was intending on staying away for much longer, but I ran out of money, and forgot my phone charger.",,,0
+229,TEST_1_229,Stevie," Oh, well, at least you were well intentioned. ",SARCASTIC, Stevie does not think he was well-intentioned,1
+230,TEST_0_230,David," It's not like I didn't think about what you said. Um, after we spoke, I thought, well, there goes my one friend. Try saying that one out loud, it is very dark.",,,0
+231,TEST_0_231,Stevie," Well... We will just have to work through this, won't we?",,,0
+232,TEST_0_232,David," Uh-huh. Yes. Yeah, um, if that's what you- if that's what you want, then yes, I would like that very much. So um, I guess just tell me what you would like me to do, and I will do it.",,,0
+233,TEST_0_233,Stevie," Okay, well, let's start by you leaving my office, and we'll see where that takes us.",,,0
+234,TEST_0_234,David," Mm-hmm. Well, I'll just... I'm gonna leave your office. I'm gonna leave your I'm gonna leave your office. So um... Best wishes to you.",,,0
+235,TEST_1_235,Stevie, Warmest regards. ,SARCASTIC, Stevie is annoyed with David,1
+236,TEST_1_236,David," Okay, you're saying this was circulated around town? This was before my nose job, how was anyone supposed to recognize me? ",RHETORICAL, David is emphasizing that he looks a lot different now because of his nose job,1
+237,TEST_0_237,Moira," Oh David, it's a rare gift to strip vanity of its charm, yet here you are.",,,0
+238,TEST_0_238,Roland, Yeah!,,,0
+239,TEST_0_239,Johnny," Oh, fuhhh...",,,0
+240,TEST_0_240,Roland," Hello, Roses!",,,0
+241,TEST_0_241,Moira," Oh, can this not wait 'til after breakfast, please?",,,0
+242,TEST_0_242,Roland," Well, this will only take a second. David! I'm so glad to see you back home, all safe and sound.",,,0
+243,TEST_0_243,David, Thanks.,,,0
+244,TEST_0_244,Roland," Hmm. And I don't want you to worry, I'm not gonna press charges, okay? Next time, someone will think twice before they steal my truck, yes? ",,,0
+245,TEST_0_245,Alexis," Ooh, burn, David!",,,0
+246,TEST_0_246,David, Shhh!,,,0
+247,TEST_0_247,Johnny," David, don't you um, have anything you wanna say to Roland?",,,0
+248,TEST_0_248,Alexis, Uh... !,,,0
+249,TEST_0_249,David," Uh, I'm sorry for taking your truck without permission. Um... It was a bad mistake, and it won't happen again. Oh my God, um... And I feel really bad about it.",,,0
+250,TEST_0_250,Alexis," But do you, David?",,,0
+251,TEST_0_251,Roland," All right, all right, all right, I accept your apology.",,,0
+252,TEST_0_252,David, Thank you.,,,0
+253,TEST_0_253,Johnny, Yeah!,,,0
+254,TEST_0_254,Roland," Okay, now let's talk about gas. I'm thinking thirty cents on the mile.",,,0
+255,TEST_0_255,Johnny," I think we're done here, Roland!",,,0
+256,TEST_0_256,David, Okay... I'm taking your juice.,,,0
+257,TEST_0_257,Alexis, David!,,,0

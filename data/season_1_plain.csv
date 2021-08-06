@@ -94,7 +94,7 @@ indx,tag,speaker,line,label,desc,bin_label
 92,TRAIN_0_92,David, Because I need it.,,,0
 93,TRAIN_0_93,Alexis, Why?,,,0
 94,TRAIN_0_94,David," Because if someone were to break in here in the middle of the night wanting to murder us, they would attack this bed first, so I need this bed. ",,,0
-95,TRAIN_1_95,Alexis, So you're saying that you want me to get murdered first?!  In front of you? And then what would you do?  Would you just run away and leave me to bleed out... On the floor?! ,RHETORICAL, Alexis is explaining that David’s plan to have her be murdered first does not make sense.,1
+95,TRAIN_1_95,Alexis, So you're saying that you want me to get murdered first?!  In front of you? And then what would you do?  Would you just run away and leave me to bleed out... On the floor?! ,RHETORICAL, Alexis is explaining that Davidï¿½s plan to have her be murdered first does not make sense.,1
 96,TRAIN_0_96,David," Uh, sort of, that was the plan, yeah. ",,,0
 97,TRAIN_0_97,Alexis," Okay. Well, you can have the bed when I leave. ",,,0
 98,TRAIN_0_98,David," Well, where are you going?",,,0
@@ -139,7 +139,7 @@ indx,tag,speaker,line,label,desc,bin_label
 137,TRAIN_0_137,Moira," Well, that is not happening. And I am appalled that my baby girl has turned into a selfish, duplicitous whore! Oh, hello!",,,0
 138,TRAIN_0_138,Twyla," Hi, I'm Twyla. I'll be your waitress today.",,,0
 139,TRAIN_0_139,"Anyway, I read about you guys, and everything you've gone through, it sounds super crappy. ",,,,0
-140,TRAIN_1_140,Johnny, Super crappy? ,RHETORICAL, Johnny knows it is terrible. He is making fun of Twyla’s word choice,1
+140,TRAIN_1_140,Johnny, Super crappy? ,RHETORICAL, Johnny knows it is terrible. He is making fun of Twylaï¿½s word choice,1
 141,TRAIN_0_141,Twyla," I had a second cousin in Elmdale who did telemarketing, he made a ton of money. It turns out his entire business was illegal, and he lost everything.",,,0
 142,TRAIN_0_142,Johnny, Hm... not quite the same.,,,0
 143,TRAIN_0_143,Twyla," Yeah, no, he went to prison, which is terrible, but... But he is learning Spanish, no mas, le duele! I think it means, ""stop, it hurts.""",,,0
@@ -236,7 +236,7 @@ indx,tag,speaker,line,label,desc,bin_label
 234,TRAIN_1_234,David," Just out of sheer curiosity, um, where do you stand now on whether or not you think this motel is cute? ",RHETORICAL, David knows Alexis does not think the motel is cute. He is rubbing the fact that her boyfriend broke up with her and she is stuck there with them in her face.,1
 235,TRAIN_0_235,David," Like, is it still cute, or is it...",,,0
 236,TRAIN_0_236,Alexis," You're a dick, David!",,,0
-237,TRAIN_1_237,David," Oh, I'm a dick! Okay, did I dump you for a party?! ",RHETORICAL, David did not. Alexis’s boyfriend did.,1
+237,TRAIN_1_237,David," Oh, I'm a dick! Okay, did I dump you for a party?! ",RHETORICAL, David did not. Alexisï¿½s boyfriend did.,1
 238,TRAIN_0_238,Johnny," David, help me with the doors.",,,0
 239,TRAIN_0_239,David," No I can't, I just got out of the shower.",,,0
 240,TRAIN_0_240,Johnny, I need help with the doors.,,,0
@@ -318,7 +318,7 @@ indx,tag,speaker,line,label,desc,bin_label
 316,TRAIN_1_316,Alexis," Oh, well, I'm sorry, I don't hire my friends at model castings. ",SARCASTIC," Alexis is saying that David has no real friends, that he instead hires them",1
 317,TRAIN_0_317,Alexis," Actually, now that I think about in, where are those friends? ",,,0
 318,TRAIN_0_318,David, They're just giving me space right now. Because they're considered people.,,,0
-319,TRAIN_1_319,Alexis, Oh right. Space. Yeah. ,SARCASTIC, Alexis is saying that David’s friends are not actually his friends,1
+319,TRAIN_1_319,Alexis, Oh right. Space. Yeah. ,SARCASTIC, Alexis is saying that Davidï¿½s friends are not actually his friends,1
 320,TRAIN_0_320,David," Okay. Well, I think it's bests that he dumped you.",,,0
 321,TRAIN_0_321,Alexis, He didn't dump me. We actually both decided that it was best that he see other people so... ,,,0
 322,TRAIN_0_322,Moira," Children, mindless bickering is a luxury we may no longer afford. You are blind to reality and for that I am most proud but our worlds evil twin... has reared her ugly... ",,,0
@@ -628,7 +628,7 @@ indx,tag,speaker,line,label,desc,bin_label
 626,TRAIN_0_626,Johnny," Oh, you're charging things to your credit card?! I see, and how are you gonna pay for it?",,,0
 627,TRAIN_0_627,David," I don't think you understand, I already have it.",,,0
 628,TRAIN_0_628,Johnny," Well, I know this is a bizarre concept for you, David, but if you want cream from Paris, you need a job, so you can pay for the cream from Paris! ",,,0
-629,TRAIN_1_629,David," Okay well, tell that to the bags under my eyes, then. ",SARCASTIC, David doesn’t want Johnny to talk to the bags under his eyes. He is saying that he needs the cream to fix the bags under his eyes,1
+629,TRAIN_1_629,David," Okay well, tell that to the bags under my eyes, then. ",SARCASTIC, David doesnï¿½t want Johnny to talk to the bags under his eyes. He is saying that he needs the cream to fix the bags under his eyes,1
 630,TRAIN_0_630,Johnny," And right after you tell your next joke, I want you to go down to the front desk, and ask what's-her-name...",,,0
 631,TRAIN_0_631,David, Stevie.,,,0
 632,TRAIN_0_632,Johnny," Where you can get a job around here! All right? I'm in the middle getting rid of an x-rated sign, before it scares off the few buyers we might actually have!",,,0
@@ -652,7 +652,7 @@ indx,tag,speaker,line,label,desc,bin_label
 650,TRAIN_0_650,David," Hi, um... question. If one were to theoretically look for a job here in Schitt's Creek, where would you... suggest that that person go to look? Is there, like, a bulletin board or a pamphlet, or something with information on it?",,,0
 651,TRAIN_0_651,Stevie," No, no bulletin board... What kind of job are you looking for? ",,,0
 652,TRAIN_0_652,David," Um, something in like, art curating, or trend forecasting.",,,0
-653,TRAIN_1_653,Stevie," Oh, okay... um, hmmm, let's see. Not seeing anything in art curating, or trend forecasting, that's weird. ",SARCASTIC, Those are very specific jobs that have no demand in Schitt’s Creek,1
+653,TRAIN_1_653,Stevie," Oh, okay... um, hmmm, let's see. Not seeing anything in art curating, or trend forecasting, that's weird. ",SARCASTIC, Those are very specific jobs that have no demand in Schittï¿½s Creek,1
 654,TRAIN_0_654,David, Okay.,,,0
 655,TRAIN_0_655,Stevie," Um, do you have any other skills or areas of expertise?",,,0
 656,TRAIN_0_656,David, I've been told I have really good taste.,,,0
@@ -956,7 +956,7 @@ indx,tag,speaker,line,label,desc,bin_label
 954,TRAIN_0_954,David," These are a collector's. There's a woman in Paris that makes them by hand, so...",,,0
 955,TRAIN_0_955,Stevie, My car's worth less than your pants.,,,0
 956,TRAIN_0_956,David," Well, I've seen your car and that makes sense to me.",,,0
-957,TRAIN_1_957,Stevie, Okay then. Right. We'll try to get $850 dollars for your pants. ,SARCASTIC, Stevie knows that they will not be able to sell David’s pants for $850 Keep or sell?,1
+957,TRAIN_1_957,Stevie, Okay then. Right. We'll try to get $850 dollars for your pants. ,SARCASTIC, Stevie knows that they will not be able to sell Davidï¿½s pants for $850 Keep or sell?,1
 958,TRAIN_0_958,David, I don't know.,,,0
 959,TRAIN_0_959,Alexis, Oh...,,,0
 960,TRAIN_0_960,Johnny," You know, I think the reason our kids are so casual with us is because they think of us as their friends. ",,,0
@@ -975,7 +975,7 @@ indx,tag,speaker,line,label,desc,bin_label
 973,TRAIN_0_973,Johnny, Your mother and I have been talking and we've come to the realization that we've not been very good parents. ,,,0
 974,TRAIN_0_974,Moira," Sadly, and most of the time, we have no interest in what's going on with you. ",,,0
 975,TRAIN_0_975,Johnny," We have no idea what. 'Cause she means no idea. We have lost touch as a family and if we're gonna get through this ordeal together, we have got to get reacquainted. Now, back at Rose Video, we had management retreats where we would play fun team-building exercises- ",,,0
-976,TRAIN_1_976,David, You also had company-wide spa days. Why don't we try that? ,RHETORICAL, David knows that they can’t afford a spa day. But he does not want to play team-building games,1
+976,TRAIN_1_976,David, You also had company-wide spa days. Why don't we try that? ,RHETORICAL, David knows that they canï¿½t afford a spa day. But he does not want to play team-building games,1
 977,TRAIN_0_977,Johnny," And one of the ice breakers at these retreats was a game that was always a hit.  And it was a game where somebody would tell a lie about themselves, and then a truth, and then another lie, and everybody would have to guess which one was the lie. ",,,0
 978,TRAIN_0_978,Moira," No, Johnny, they had to guess which one was the truth. ",,,0
 979,TRAIN_0_979,Johnny, Mm... which one was the lie.,,,0
@@ -990,7 +990,7 @@ indx,tag,speaker,line,label,desc,bin_label
 988,TRAIN_0_988,Johnny, So you've heard of it. You've heard of it.,,,0
 989,TRAIN_0_989,Alexis," Well, yeah, because babies play that at their birthday parties. ",,,0
 990,TRAIN_0_990,Johnny," Okay, whatever. It's a good game. Okay? Now, here's how it goes. I'll give you an example.",,,0
-991,TRAIN_1_991,David," Why don't I start? Um, I'm miserable, drunk, and hate this game. So... here's a hint... Sadly, I'm not drunk. ",SARCASTIC, David is not sad he’s not drunk. He’s being dramatic,1
+991,TRAIN_1_991,David," Why don't I start? Um, I'm miserable, drunk, and hate this game. So... here's a hint... Sadly, I'm not drunk. ",SARCASTIC, David is not sad heï¿½s not drunk. Heï¿½s being dramatic,1
 992,TRAIN_0_992,Johnny," Okay, wrong attitude. That's the wrong-right off the top!",,,0
 993,TRAIN_0_993,Alexis," Okay, my turn, my turn, my turn. Um... okay. My eyes are brown, I am basically sample-sized, and one time I escaped from a Thai drug lord's car trunk by bribing him with s*x. ",,,0
 994,TRAIN_0_994,Johnny," Right idea, honey, but you know what? It's gotta be more challenging for everybody-",,,0
@@ -999,7 +999,7 @@ indx,tag,speaker,line,label,desc,bin_label
 997,TRAIN_0_997,Alexis, I'm kidding! I clearly would never bribe anybody with s*x.,,,0
 998,TRAIN_0_998,Johnny, When were you in Thailand?!,,,0
 999,TRAIN_0_999,Alexis, I told you that I was on spring break. Everyone can just calm down because Aroon was a lovely gentleman until he ran out of money.,,,0
-1000,TRAIN_1_1000,David, How many people do you know that are currently in the prison system? Is it like twelve...? ,SARCASTIC," David is pointing out that many of Alexis’s acquaintances are criminals, but he does not want to know exactly how many are in the prison system",1
+1000,TRAIN_1_1000,David, How many people do you know that are currently in the prison system? Is it like twelve...? ,SARCASTIC," David is pointing out that many of Alexisï¿½s acquaintances are criminals, but he does not want to know exactly how many are in the prison system",1
 1001,TRAIN_0_1001,Alexis," Um, I'm pretty sure just two. ",,,0
 1002,TRAIN_0_1002,Johnny," All right, that's enough. Good game. Good game, everybody! Alexis you're grounded.",,,0
 1003,TRAIN_0_1003,Alexis," No! That was ten years ago, and everybody does dumb stuff in high school.",,,0
@@ -1048,7 +1048,7 @@ indx,tag,speaker,line,label,desc,bin_label
 1046,TRAIN_0_1046,David," Okay. Is there a problem, Wayne?",,,0
 1047,TRAIN_0_1047,Wayne," It's just... I can't really use any of this. It's too, you know...",,,0
 1048,TRAIN_0_1048,Stevie, Funky?,,,0
-1049,TRAIN_1_1049,Wayne, Sure. Let's go with that. ,SARCASTIC," Wayne doesn’t like the stuff, but doesn’t want to be rude, so he agrees with Stevie’s word of “funky.”",1
+1049,TRAIN_1_1049,Wayne, Sure. Let's go with that. ,SARCASTIC," Wayne doesnï¿½t like the stuff, but doesnï¿½t want to be rude, so he agrees with Stevieï¿½s word of ï¿½funky.ï¿½",1
 1050,TRAIN_0_1050,David," Okay, let's take your oily hands off my clothes. ",,,0
 1051,TRAIN_0_1051,Stevie, You sure you can't take any of this stuff? Some of this stuff's pretty good. ,,,0
 1052,TRAIN_0_1052,Wayne, Um... maybe we can use the sneakers.,,,0
@@ -1144,7 +1144,7 @@ indx,tag,speaker,line,label,desc,bin_label
 1142,TRAIN_0_1142,Johnny, Talk about salacious!,,,0
 1143,TRAIN_0_1143,Man on TV, He had long day at work. I ran into Tanya on the street. ,,,0
 1144,TRAIN_0_1144,Moira, He cut off his what?!,,,0
-1145,TRAIN_0_1145,Alexis," Wait, what? – ",,,0
+1145,TRAIN_0_1145,Alexis," Wait, what? ï¿½ ",,,0
 1146,TRAIN_0_1146,Johnny, Okay.,,,0
 1147,TRAIN_0_1147,David, How did it happen?,,,0
 1148,TRAIN_0_1148,Johnny," Look, I just, uh... I just want to make sure that, uh, you know, we're all okay. ",,,0
@@ -1169,7 +1169,7 @@ indx,tag,speaker,line,label,desc,bin_label
 1167,TRAIN_0_1167,Moira,  David!,,,0
 1168,TRAIN_0_1168,Johnny, Where's my robe?! ,,,0
 1169,TRAIN_0_1169,David, Oh my God. Oh my God. Oh my God. ,,,0
-1170,TRAIN_1_1170,Alexis," Oh my God, what's happening? I saw hell is what's happening. Oh my God. ",SARCASTIC, David’s parents having sex is like hell to him,1
+1170,TRAIN_1_1170,Alexis," Oh my God, what's happening? I saw hell is what's happening. Oh my God. ",SARCASTIC, Davidï¿½s parents having sex is like hell to him,1
 1171,TRAIN_0_1171,Alexis, What?  ,,,0
 1172,TRAIN_0_1172,David, Oh my God.,,,0
 1173,TRAIN_0_1173,Johnny," David, what you just saw was your mother and me...",,,0
@@ -1182,19 +1182,19 @@ indx,tag,speaker,line,label,desc,bin_label
 1180,TRAIN_0_1180,Moira," I hate to be the one to tell you, but having sex is not just about making children so they can grow up and make you feel bad about having sex. ",,,0
 1181,TRAIN_0_1181,Alexis," Oh my God, can you stop this please?!",,,0
 1182,TRAIN_0_1182,Moira, I will not be shamed. Shame on you.,,,0
-1183,TRAIN_0_1183,David, Shame on you for attempting that position at 8 o’clock in the morning.,,,0
+1183,TRAIN_0_1183,David, Shame on you for attempting that position at 8 oï¿½clock in the morning.,,,0
 1184,TRAIN_0_1184,Moira, John?,,,0
 1185,TRAIN_0_1185,Johnny, You know what?,,,0
 1186,TRAIN_0_1186,David, Oh my God. Do you know how difficult it is for us to share a wall with you two?,,,0
 1187,TRAIN_0_1187,David, I do now. ,,,0
-1188,TRAIN_0_1188,Johnny," Yes, well, if you don’t mind, we are now going back into our room and don’t even think about opening that door! ",,,0
+1188,TRAIN_0_1188,Johnny," Yes, well, if you donï¿½t mind, we are now going back into our room and donï¿½t even think about opening that door! ",,,0
 1189,TRAIN_0_1189,Moira, Are you serious?,,,0
 1190,TRAIN_0_1190,Johnny, Next time.,,,0
 1191,TRAIN_0_1191,David,  Oh my God.  ,,,0
 1192,TRAIN_0_1192,Alexis,"  No, no, no... ",,,0
 1193,TRAIN_0_1193,Johnny," Roland, I just need the door fixed.",,,0
 1194,TRAIN_0_1194,Roland, Mm-hmm?,,,0
-1195,TRAIN_0_1195,Johnny," Okay? My family can’t keep living like this. My wife and I, we have no privacy.",,,0
+1195,TRAIN_0_1195,Johnny," Okay? My family canï¿½t keep living like this. My wife and I, we have no privacy.",,,0
 1196,TRAIN_0_1196,Roland," Okay, all right. I get what this is about. You and the wife wanna bump the old uglies, huh?",,,0
 1197,TRAIN_0_1197,Johnny, I have no idea what that means.,,,0
 1198,TRAIN_0_1198,Roland," Having a little problem down there below there, Johnny boy, huh?",,,0
@@ -1537,7 +1537,7 @@ indx,tag,speaker,line,label,desc,bin_label
 1535,TRAIN_0_1535,Alexis, Okay! No problem. Bye. He's gonna call you back in your room!,,,0
 1536,TRAIN_0_1536,Johnny, No!,,,0
 1537,TRAIN_0_1537,Moira, Hello?,,,0
-1538,TRAIN_0_1538,David, Can you get a heart murmur from a lack of sleep? Because I have not slept since we’ve got here and I think my body is shutting down. ,,,0
+1538,TRAIN_0_1538,David, Can you get a heart murmur from a lack of sleep? Because I have not slept since weï¿½ve got here and I think my body is shutting down. ,,,0
 1539,TRAIN_1_1539,Alexis," Well, I hate to admit it, but I actually know very little about heart murmurs. ",SARCASTIC, Alexis obviously does not know anything about heart murmurs. She is making fun of David for asking her about it,1
 1540,TRAIN_0_1540,David," Well, I have one. Uh, the pulse is very irregular.",,,0
 1541,TRAIN_0_1541,Alexis," Honestly, David, I have tried to find my pulse like a thousand times and nothing. So don't worry about it. ",,,0
@@ -1564,7 +1564,7 @@ indx,tag,speaker,line,label,desc,bin_label
 1562,TRAIN_0_1562,Johnny, He said former landfill.,,,0
 1563,TRAIN_0_1563,Herb Ertlinger, Sorry. I was looking into a new sprayer. And I brought you this... It's our Cabernet Merlot petit grenache.,,,0
 1564,TRAIN_0_1564,Moira and Johnny, Oh!,,,0
-1565,TRAIN_1_1565,Moira, Sounds delightfully busy. ,SARCASTIC, Moira does not like how many different kinds of grapes are in the wine. She is being sarcastic with the word “delightful.”,1
+1565,TRAIN_1_1565,Moira, Sounds delightfully busy. ,SARCASTIC, Moira does not like how many different kinds of grapes are in the wine. She is being sarcastic with the word ï¿½delightful.ï¿½,1
 1566,TRAIN_0_1566,Johnny," You know, uh, Herb, if you need any help with distribution, I have extensive contacts in that area, or if it's operations management... ",,,0
 1567,TRAIN_0_1567,Herb Ertlinger," Johnny, while I appreciate that offer, it's actually not your help I'm looking for.",,,0
 1568,TRAIN_0_1568,Johnny, Oh.,,,0
@@ -1738,7 +1738,7 @@ indx,tag,speaker,line,label,desc,bin_label
 1736,TRAIN_0_1736,Mutt, Hi.,,,0
 1737,TRAIN_0_1737,Alexis, Hey.,,,0
 1738,TRAIN_0_1738,Jocelyn, Ted told me all about your... Nervous breakdown.,,,0
-1739,TRAIN_1_1739,David, My... my what? ,RHETORICAL, David heard Jocelyn but is trying to pretend he didn’t have a breakdown,1
+1739,TRAIN_1_1739,David, My... my what? ,RHETORICAL, David heard Jocelyn but is trying to pretend he didnï¿½t have a breakdown,1
 1740,TRAIN_0_1740,Jocelyn," I was at the cafe. He didn't mention any names, but when he said it was someone ""precious,"" I knew. ",,,0
 1741,TRAIN_0_1741,Clapper-loader, Slating! ,,,0
 1742,TRAIN_0_1742,Moira, ...Somehow. ,,,0
@@ -2030,7 +2030,7 @@ indx,tag,speaker,line,label,desc,bin_label
 2028,TRAIN_0_2028,Stevie, Here. You can take this one. It has a scope so you can see the head.,,,0
 2029,TRAIN_0_2029,Roland," Okay!  Gather round, my shooters. Bob has a little prayer here he'd like to offer up. Just a little convo with the big man upstairs for a second.",,,0
 2030,TRAIN_0_2030,Stevie, It happens every year.,,,0
-2031,TRAIN_0_2031,Bob," Our God, in these times of need, our light in these times of darkness… David, do you wanna…",,,0
+2031,TRAIN_0_2031,Bob," Our God, in these times of need, our light in these times of darknessï¿½ David, do you wannaï¿½",,,0
 2032,TRAIN_0_2032,David, Oh.,,,0
 2033,TRAIN_0_2033,Alexis," So is it, like, a small town thing to end the first date with a kiss on the cheek?",,,0
 2034,TRAIN_0_2034,Alexis, What?,,,0
@@ -2068,7 +2068,7 @@ indx,tag,speaker,line,label,desc,bin_label
 2066,TRAIN_0_2066,Stevie, Yeah.,,,0
 2067,TRAIN_0_2067,Moira," Oh, uh, Jocelyn, would you grab us a table while I speak with my husband, please.",,,0
 2068,TRAIN_0_2068,Jocelyn," Well, he should join us! And... between you and me, people are noticing you!",,,0
-2069,TRAIN_1_2069,Moira," Excuse me, cowboy, have you seen my husband? ",RHETORICAL, Johnny is Moira’s husband. She is making fun of the hairstyle she got at the spa,1
+2069,TRAIN_1_2069,Moira," Excuse me, cowboy, have you seen my husband? ",RHETORICAL, Johnny is Moiraï¿½s husband. She is making fun of the hairstyle she got at the spa,1
 2070,TRAIN_0_2070,Johnny," Oh my God. Oh, oh, oh...  Look at you. Boy, you look like... ",,,0
 2071,TRAIN_0_2071,Moira, Who? Who do I look like?,,,0
 2072,TRAIN_0_2072,Johnny, I wanna say Tanya Harding. ,,,0
@@ -2257,8 +2257,8 @@ indx,tag,speaker,line,label,desc,bin_label
 2255,TRAIN_0_2255,Bob, What road?,,,0
 2256,TRAIN_0_2256,Johnny," Well, this road, I'll take it up this road.",,,0
 2257,TRAIN_0_2257,Bob," Okay, but no lefts, okay? Because they lead to the highway, and I really don't want her on the highway. ",,,0
-2258,TRAIN_1_2258,Johnny, Why would I take it on the highway? ,RHETORICAL, Johnny is pretending like he won’t take the car on the highway,1
-2259,TRAIN_1_2259,Mutt," You do know that just staring at the fence isn't gonna help me fix it, right? ",RHETORICAL, Mutt and Alexis know that staring at the fence is not helpful. Mutt is trying to get Alexis’s attention,1
+2258,TRAIN_1_2258,Johnny, Why would I take it on the highway? ,RHETORICAL, Johnny is pretending like he wonï¿½t take the car on the highway,1
+2259,TRAIN_1_2259,Mutt," You do know that just staring at the fence isn't gonna help me fix it, right? ",RHETORICAL, Mutt and Alexis know that staring at the fence is not helpful. Mutt is trying to get Alexisï¿½s attention,1
 2260,TRAIN_0_2260,Alexis," Yeah, I am. I'm just thinking about Ted, and how nice he is, and... generous, like, almost too generous. And I just wanna grab him by the sweater sometime, and be like, ""stop being so generous and nice!"" ",,,0
 2261,TRAIN_0_2261,Mutt, He always has been. I feel bad thinking about all those times I pinned him against a locker.,,,0
 2262,TRAIN_0_2262,Alexis, You pinned somebody against a locker?!,,,0
@@ -2653,7 +2653,7 @@ indx,tag,speaker,line,label,desc,bin_label
 2651,TRAIN_0_2651,Johnny," Thank you... minister. Carl... What to say about Carl... ? Once so full of life and now... lying... very, very close to me. What a terrible thing death is...  And yet, for Carl, pretty much an all-consuming thing at this point.  He-he was a- he was a man who loved... A good sweater I'm told.  And-and he loved the feel of big tool in his hand, am I right, Bob?  And I wonder, when Carl was spinning around on that ceiling fan that he was so very proud of, was he ever thinking of this town... where he was born where he lived, and where he died... Where he died.  But I-I-I'm not up here today to speak about dying in Schitt's Creek.  I'm-I'm here-I'm-",,,0
 2652,TRAIN_0_2652,Bree," Where the hell are you, Sean?! At a bar?! If anyone should be in a bar right now, it's me. Fuck Sean! Excuse me.",,,0
 2653,TRAIN_0_2653,Johnny," Well... I-I am here to talk about dying in Schitt's Creek! I'm here to talk about the misery of our lives here and how we might never escape this place, and how we do not wanna end up in a coffin, like Carl, here in this... godforsaken- ",,,0
-2654,TRAIN_0_2654,Moira," Oh, Danny boy, the pipes, the pipes are calling… From Glen to Glen",,,0
+2654,TRAIN_0_2654,Moira," Oh, Danny boy, the pipes, the pipes are callingï¿½ From Glen to Glen",,,0
 2655,TRAIN_0_2655,Mourners, And down the Mountain side but God...,,,0
 2656,TRAIN_0_2656,Ted," So... I'm sorry if, earlier, I wasn't sensitive to your animal issues. And if it's any consolation, the dogs told me to tell you that they're super embarrassed about their behaviour, too. ",,,0
 2657,TRAIN_0_2657,Alexis," Well, I am dating a vet. I should've known that... There'd be slutty little animals running around.",,,0
@@ -2688,7 +2688,7 @@ indx,tag,speaker,line,label,desc,bin_label
 2686,TRAIN_0_2686,Stevie, Shhhhhh!,,,0
 2687,TRAIN_0_2687,Sean, My hat.. ,,,0
 2688,TRAIN_0_2688,David, I'm wearing it. I'm wearing it...,,,0
-2689,TRAIN_1_2689,Johnny," So I'm thinking to myself, ""Oh, God, what if die here?"" ",RHETORICAL, Johnny is realizing he may be stuck in Schitt’s Creek for the rest of his life,1
+2689,TRAIN_1_2689,Johnny," So I'm thinking to myself, ""Oh, God, what if die here?"" ",RHETORICAL, Johnny is realizing he may be stuck in Schittï¿½s Creek for the rest of his life,1
 2690,TRAIN_0_2690,Moira," Mm. That was not lost on anyone.  Uh, let's pilfer a few sandwiches and make a gracious French exit. ",,,0
 2691,TRAIN_0_2691,Johnny, Good idea. ,,,0
 2692,TRAIN_0_2692,Jocelyn," Moira! Your ""Danny Boy""... What a voice. ",,,0
@@ -2696,7 +2696,7 @@ indx,tag,speaker,line,label,desc,bin_label
 2694,TRAIN_0_2694,Roland," Yeah.  I-I'd really like you to sing at my cousin's funeral.  She's not dead, but...  She's been coughing a lot lately. ",,,0
 2695,TRAIN_0_2695,Bob," Moira, before they close the coffin, One more chorus for Carl?  Please? ",,,0
 2696,TRAIN_0_2696,Johnny," Take your time, honey. ",,,0
-2697,TRAIN_0_2697,Moira," Ooh-ooh, ooh-ooh, ooh-ooh, ooh-ooh-ooh ooh ooh... Oh... Danny... Boy... The pipes, the pipes are… Call-all-all-ling... ",,,0
+2697,TRAIN_0_2697,Moira," Ooh-ooh, ooh-ooh, ooh-ooh, ooh-ooh-ooh ooh ooh... Oh... Danny... Boy... The pipes, the pipes areï¿½ Call-all-all-ling... ",,,0
 2698,TRAIN_1_2698,David, This was a good choice. ,SARCASTIC, David is pointing out that maybe he and Stevie made a mistake,1
 2699,TRAIN_1_2699,Stevie, Yep. We make good choices. ,SARCASTIC, Stevie is making fun of their choices,1
 2700,TRAIN_1_2700,David," Mm-hmm, this was a really healthy choice. ",SARCASTIC, David is implying that he and Stevie made an unhealthy choice for their friendship,1
@@ -2828,7 +2828,7 @@ indx,tag,speaker,line,label,desc,bin_label
 2826,TRAIN_0_2826,Roland, Hm-hm.,,,0
 2827,TRAIN_0_2827,Johnny," Wow, it sounds like um... quite the evening.",,,0
 2828,TRAIN_0_2828,Moira, So whose pig do we have to slaughter to get an invite? ,,,0
-2829,TRAIN_1_2829,Jocelyn," Oh my goodness, well, um...  We just didn't think that you and Johnny would wanna come, so...",RHETORICAL, Moira wants an invite to the party. She doesn’t want to slaughter a pig,1
+2829,TRAIN_1_2829,Jocelyn," Oh my goodness, well, um...  We just didn't think that you and Johnny would wanna come, so...",RHETORICAL, Moira wants an invite to the party. She doesnï¿½t want to slaughter a pig,1
 2830,TRAIN_0_2830,Moira," Well, that's a touch presumptuous Jocelyn, why would we not want to be involved in a themed party in your yard? ",,,0
 2831,TRAIN_0_2831,Johnny, Right.,,,0
 2832,TRAIN_0_2832,Roland," Well, I mean, for one thing, you know, the two of you are a little...",,,0
@@ -3096,7 +3096,7 @@ indx,tag,speaker,line,label,desc,bin_label
 3094,TRAIN_0_3094,Alexis, So you're writing a song for Mutt then?,,,0
 3095,TRAIN_0_3095,Twyla," Yeah, I'm trying to.",,,0
 3096,TRAIN_0_3096,Alexis," Cute! So what, is it about... Your feelings, or is it love and... what?",,,0
-3097,TRAIN_1_3097,Ted, Are we shooting a Dateline investigative report? ,RHETORICAL, Ted is making fun of Alexis for asking so many questions about Twyla’s song for Mutt,1
+3097,TRAIN_1_3097,Ted, Are we shooting a Dateline investigative report? ,RHETORICAL, Ted is making fun of Alexis for asking so many questions about Twylaï¿½s song for Mutt,1
 3098,TRAIN_0_3098,Alexis," No... we're not. I'm just looking out for my friend. Um... honestly, Twy, ixnay on the ongsay. Because I tried it once and the guy ripped the guitar out of my hands and he just started smashing it on the ground. Granted, I'm tone deaf and he was a... He was a super angry marine, but...",,,0
 3099,TRAIN_0_3099,Ted, Just let the girl write her boyfriend a song!,,,0
 3100,TRAIN_0_3100,Alexis," Okay, I know! And I'm all for it, I'm all for it. I just think it's um... I think it's a super big mistake.",,,0
@@ -3126,7 +3126,7 @@ indx,tag,speaker,line,label,desc,bin_label
 3124,TRAIN_0_3124,Mutt, And I think we've both known it for a while now.,,,0
 3125,TRAIN_0_3125,Alexis, Oh.,,,0
 3126,TRAIN_0_3126,Moira," Oh, give me a break. How did you find me?",,,0
-3127,TRAIN_1_3127,Deedee," Well, where else is there to go? ",RHETORICAL, There are no real places to gather in Schitt’s creek besides the cafe,1
+3127,TRAIN_1_3127,Deedee," Well, where else is there to go? ",RHETORICAL, There are no real places to gather in Schittï¿½s creek besides the cafe,1
 3128,TRAIN_0_3128,Deedee, And Johnny may have told me.,,,0
 3129,TRAIN_1_3129,Moira," Thank you, Johnny. ",SARCASTIC, Moira is mad that Johnny told Deedee where she was,1
 3130,TRAIN_0_3130,Deedee," Moira, why are you making this so difficult for me?",,,0
@@ -3214,7 +3214,7 @@ indx,tag,speaker,line,label,desc,bin_label
 3212,TRAIN_0_3212,Johnny," Oh, so... unnecessary, Deedee, but thank you. Well, who's up for pork? ",,,0
 3213,TRAIN_0_3213,Connor," Okay... so you're telling me your girlfriend is on a date with someone else and, instead of doing something about it, you're here talking to me, a kid who practically has no respect for you. ",,,0
 3214,TRAIN_0_3214,David," Well, first of all, you're a little bitchy. Second of all, she is not my girlfriend. She's someone I'm occasionally having sex with because we're bored and desperate. ",,,0
-3215,TRAIN_1_3215,Connor, Ah... you're doing a friends with benefits thing with this girl. Have you not seen the 42 films they've made about it? ,RHETORICAL, Connor is pointing out that there are many examples that the friend with benefits situation doesn’t work,1
+3215,TRAIN_1_3215,Connor, Ah... you're doing a friends with benefits thing with this girl. Have you not seen the 42 films they've made about it? ,RHETORICAL, Connor is pointing out that there are many examples that the friend with benefits situation doesnï¿½t work,1
 3216,TRAIN_0_3216,Connor, It never works.,,,0
 3217,TRAIN_0_3217,David," Okay, well, movies aren't always right, all right? You'll learn that later in life.  I happen to be a little bit older than you are, so... ",,,0
 3218,TRAIN_0_3218,Connor, Obviously.,,,0
@@ -3660,7 +3660,7 @@ indx,tag,speaker,line,label,desc,bin_label
 3658,TRAIN_0_3658,Ted, So... is that a no? ,,,0
 3659,TRAIN_0_3659,Alexis, Yes... ?,,,0
 3660,TRAIN_0_3660,Stevie, Are you stealing Roland's truck?,,,0
-3661,TRAIN_1_3661,David," Yeah. It's not exactly a Tesla, but it'll get our bags to the airport. ",SARCASTIC, David is making fun of Roland’s truck for not being very nice,1
+3661,TRAIN_1_3661,David," Yeah. It's not exactly a Tesla, but it'll get our bags to the airport. ",SARCASTIC, David is making fun of Rolandï¿½s truck for not being very nice,1
 3662,TRAIN_0_3662,Stevie, So you wanted to see me?,,,0
 3663,TRAIN_0_3663,David, Yeah. I had an idea.,,,0
 3664,TRAIN_0_3664,Stevie, Oh-oh.,,,0
@@ -3700,7 +3700,7 @@ indx,tag,speaker,line,label,desc,bin_label
 3698,TRAIN_0_3698,Johnny," But-but-but don't worry, 'cause... ",,,0
 3699,TRAIN_0_3699,Roland," Well, I am worried!",,,0
 3700,TRAIN_0_3700,Johnny, It'll be fine. Roland.,,,0
-3701,TRAIN_1_3701,Roland, This is the guy who's gonna buy the town? ,RHETORICAL, Roland is saying that he doesn’t like the guy who is going to buy the town,1
+3701,TRAIN_1_3701,Roland, This is the guy who's gonna buy the town? ,RHETORICAL, Roland is saying that he doesnï¿½t like the guy who is going to buy the town,1
 3702,TRAIN_0_3702,Johnny, Just relax.,,,0
 3703,TRAIN_0_3703,Andy,"  Yeah, and here's the kicker... The second one was a hooker too!  Yeah, yeah. Okay, see ya. See ya. Excuse me, honey, do you know where I can find Johnny Rose? I got a meeting with this freakin' douche.",,,0
 3704,TRAIN_0_3704,Roland,  The douchebag is right here.,,,0
@@ -3728,7 +3728,7 @@ indx,tag,speaker,line,label,desc,bin_label
 3726,TRAIN_0_3726,Johnny," Well, right after we sign, we can all have one.",,,0
 3727,TRAIN_0_3727,Andy," And according to Roland here, Jocelyn's hot stuff. I can't leave town without meeting her. But then again, if she's that hot what's she doing with this guy? ",,,0
 3728,TRAIN_0_3728,Roland, I can't help it if she's got taste!,,,0
-3729,TRAIN_1_3729,Andy," Oh yeah, right. Yeah, taste. Yeah. ",SARCASTIC," Andy is making fun of Roland, saying it doesn’t make sense that Jocelyn is married to her",1
+3729,TRAIN_1_3729,Andy," Oh yeah, right. Yeah, taste. Yeah. ",SARCASTIC," Andy is making fun of Roland, saying it doesnï¿½t make sense that Jocelyn is married to her",1
 3730,TRAIN_1_3730,Alexis," Well, excuse you in that coat! ",SARCASTIC, Alexis likes the coat,1
 3731,TRAIN_0_3731,Ronnie, I know! Jocelyn gave it to me.,,,0
 3732,TRAIN_0_3732,Alexis, What?! Knock-off's are getting so good these days.,,,0
@@ -3748,7 +3748,7 @@ indx,tag,speaker,line,label,desc,bin_label
 3746,TRAIN_0_3746,David, Okay. What does it... does it mean... something?,,,0
 3747,TRAIN_0_3747,Stevie," Ugh... I like you. I don't want to like you but I do... And so sharing a space with you as roommates isn't gonna work for me. Um... so I'm gonna take a pass, but um... I'm sure you have a lot of friends who would love to live with you. ",,,0
 3748,TRAIN_0_3748,David," Yeah, not as many as you'd think, so... Um... okay. Well, thank you for being honest and um... I wish I could fix this situation.  Um... you've been a great friend. You've been my o-only friend, so... great, nevertheless. Um... you've made my life here survivable.",,,0
-3749,TRAIN_1_3749,Stevie, Survivable. Thank-thank you. That is the nicest thing anyone has ever said to me. ,SARCASTIC, Stevie is saying that “survivable” was probably not the best word to use as it didn’t come across as a compliment,1
+3749,TRAIN_1_3749,Stevie, Survivable. Thank-thank you. That is the nicest thing anyone has ever said to me. ,SARCASTIC, Stevie is saying that ï¿½survivableï¿½ was probably not the best word to use as it didnï¿½t come across as a compliment,1
 3750,TRAIN_0_3750,David, So now I'm gonna go back to New York... by myself and um... and you can just stay here then. ,,,0
 3751,TRAIN_0_3751,Stevie,  Yeah. I think that's... That's how it has to be.,,,0
 3752,TRAIN_0_3752,David, Mm-hmm. Mm-hmm.,,,0
@@ -3876,4 +3876,3 @@ indx,tag,speaker,line,label,desc,bin_label
 3874,TRAIN_0_3874,Johnny, She'll be okay. Where's your brother?,,,0
 3875,TRAIN_0_3875,Alexis,  Who?,,,0
 3876,TRAIN_0_3876,Johnny, David!,,,0
-,,,,,,

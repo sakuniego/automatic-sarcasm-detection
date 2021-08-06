@@ -230,9 +230,10 @@ def make_3d_tsne(vectors, labels):
     filename = "./visualizations/sarcasm_3d_tsne.png"
     plt.savefig(filename, format = "png")
 
+# referenced TDS
 def make_learn_vec(model, tag_data):
     vals = tag_data.values
-    targets, regressors = zip(*[(post.tags[0], model.infer_vector(post.words, steps = 20)) for post in vals])
+    targets, regressors = zip(*[(line.tags[0], model.infer_vector(line.words, steps = 20)) for line in vals])
     return targets, regressors
 
 def create_d2v_model(tag_train): # rename to create_d2v_model
@@ -245,24 +246,25 @@ def create_d2v_model(tag_train): # rename to create_d2v_model
 
     return model
 
-def create_mlp(train_vecs, train_labels):
+def create_mlp(train_vecs, train_labels, test_vecs, test_labels):
     # save results of d2v model in main
-    # do train test split
     scale_vecs = StandardScaler()
     scaled_train_vecs = scale_vecs.fit_transform(train_vecs)
     # TODO: do above for test vecs too
-    # scaled_test_vecs = scale_vecs.transform(test_vecs)
+    scaled_test_vecs = scale_vecs.transform(test_vecs)
 
     # one hidden layer of size 100 TODO: Change hidden layers
     basic_clf = MLPClassifier(hidden_layer_sizes=(100,),activation="relu",random_state=1).fit(scaled_train_vecs,
                                                                                               train_labels)
-    # label_pred = basic_clf.predict(scaled_test_vecs)
+    label_pred = basic_clf.predict(scaled_test_vecs)
 
-    # print(basic_clf.score(scaled_test_vecs, test_labels))
+    print(basic_clf.score(scaled_test_vecs, test_labels))
 
-    # fig = plot_confusion_matrix(basic_clf, scaled_test_vecs, test_labels, display_labels = [0, 1])
-    # fig.figure_.suptitle("Sarcasm Confusion Matrix")
-    # plt.show()
+    matplotlib.rcParams.update(matplotlib.rcParamsDefault) # reset font-size
+    fig = plot_confusion_matrix(basic_clf, scaled_test_vecs, test_labels) # TODO: set display labels
+    fig.figure_.suptitle("Sarcasm Confusion Matrix")
+    filename = "./visualizations/sarcasm_confusion_matrix.png"
+    plt.savefig(filename, format="png", bbox_inches = "tight")
 
 def individual_mlp(speaker, df_train): # TODO: Add df_test
     df_train = df_train[df_train['speaker'].str.contains(speaker)] # removing all rows where speaker col !contain speaker param
@@ -332,6 +334,13 @@ def main():
     print("STATUS UPDATE: Tokenizing data...\n")
 
     # tagging script line with tag col
+    # TODO: could just not do it separately and combine before and tag at same time
+    # TODO: remove
+    '''
+    frames = [train_df, test_df]
+    combined_df = pd.concat(frames)
+    tag_all = combined_df.apply(lambda r: TaggedDocument(words=tokenize(r['line']), tags=[r.tag]), axis=1)
+    '''
     tag_train = train_df.apply(lambda r: TaggedDocument(words=tokenize(r['line']), tags=[r.tag]), axis=1)
     tag_test = test_df.apply(lambda r: TaggedDocument(words=tokenize(r['line']), tags=[r.tag]), axis=1)
 
@@ -343,55 +352,90 @@ def main():
     # Desc: Creating Doc2Vec model and saving
     filename = "./models/d2v_schitt.model"
 
+    # TODO COMMENT OUT
     # TODO: Uncomment to update model
-    ''' 
-    print("STATUS UPDATE: Creating and training model...\n")
+    print("STATUS UPDATE: Creating and training d2v model...\n")
     start_time_3 = time.time()
     
     model = create_d2v_model(tag_train)
     model.save(filename)
     
-    print("Took <%s minutes to create/train model\n" % math.ceil((time.time() - start_time_3)/60))
-    '''
+    print("Took <%s minutes to create/train d2v model\n" % math.ceil((time.time() - start_time_3)/60))
 
     # 3. USING MODEL
-    model = Doc2Vec.load(filename) # loading existing model
+    # model = Doc2Vec.load(filename) # loading existing model TODO: UNCOMMENT
     print("STATUS UPDATE: Loaded pre-existing model\n")
 
     # Find similar words...
     #word = "motel" # change this to the word you'd like to see
     #similar_words(model, word)
 
-    #print(len(model['TRAIN_0_0'])) #TODO:should remove
+    y_train, X_train = make_learn_vec(model, tag_train)
+    y_test, X_test = make_learn_vec(model, tag_test)
 
-    # Training classifier... (log reg)
-    print("STATUS UPDATE: Training classifier...")
+    #print(y_test)
+    y_train = list(y_train)
+    y_test = list(y_test)
 
-# TODO: update 265, put this in own function
-    lines = len(model.dv.index_to_key) # stores number of total utterances (lines)
-
-    train_vecs = numpy.zeros((lines, 100)) # 265 lines represented by len 100 vector
-    train_labels = numpy.zeros(lines) # 1 if sarcastic/rhetorical, 0 if not
-
-    # TODO: update 265
-    # TODO: remember range is non-inclusive
-    # stores vectors and whether they're sarcastic or not in separate arrays
-    for i in range (0,lines-1): # TODO: Why did this not work w/o -1?
+    for i in range(len(y_train)):
         tag_not = "TRAIN_0_" + str(i)
         tag_sarc = "TRAIN_1_" + str(i)
-        if tag_not in model.dv.index_to_key:
-            train_vecs[i] = model[tag_not]
+        if y_train[i] == tag_not:
+            y_train[i] = '0'
+        elif y_train[i] == tag_sarc:
+            y_train[i] = '1'
+
+    for i in range(len(y_test)):
+        tag_not = "TEST_0_" + str(i)
+        tag_sarc = "TEST_1_" + str(i)
+        if y_test[i] == tag_not:
+            y_test[i] = '0'
+        elif y_test[i] == tag_sarc:
+            y_test[i] = '1'
+
+    y_train = tuple(y_train)
+    y_test = tuple(y_test)
+
+# TODO: update 265, put this in own function
+    '''
+    lines = len(model.dv.index_to_key) # stores number of total utterances (lines)
+    lines_train = len(train_df) # num training utterances
+    lines_test = len(test_df) # num testing utterances
+
+    train_vecs = numpy.zeros((lines_train, 100)) # each line represented by len 100 vector
+    train_labels = numpy.zeros(lines_train) # 1 if sarcastic/rhetorical, 0 if not
+    test_vecs = numpy.zeros((lines_test, 100))
+    test_labels = numpy.zeros(lines_test)
+
+    # TODO: remember range is non-inclusive
+    # put all this and below part int oone function
+    # stores vectors and whether they're sarcastic or not in separate arrays
+    for i in range (0, lines):
+        tag_not_train = "TRAIN_0_" + str(i)
+        tag_sarc_train = "TRAIN_1_" + str(i)
+        tag_not_test = "TEST_0_" + str(i)
+        tag_sarc_test = "TEST_1_" + str(i)
+        if tag_not_train in model.dv.index_to_key:
+            train_vecs[i] = model[tag_not_train]
             train_labels[i] = 0
-        else:
-            train_vecs[i] = model[tag_sarc]
+        elif tag_sarc_train in model.dv.index_to_key:
+            train_vecs[i] = model[tag_sarc_train]
             train_labels[i] = 1
+        elif tag_not_test in model.dv.index_to_key:
+            test_vecs[i] = model[tag_not_test]
+            test_labels[i] = 0
+        elif tag_sarc_test in model.dv.index_to_key:
+            test_vecs[i] = model[tag_sarc_test]
+            test_labels[i] = 1
+
+    # train_vecs, train_labels = extract_vecs(model)
 
     # TODO: make this into its own method!
     # turning vectors into comma-separated string to create updated csv w/ vectors
     vecs = []
 
     # TODO: why is there a blank line at the end of result file?
-    for i in range(lines):
+    for i in range(lines_train):
         j = 0
         str_rep = ""
         while j < 100:
@@ -406,15 +450,26 @@ def main():
     #print(model['TRAIN_0_1'])
 
     train_vecs_df.to_csv("./data/train_and_vectors") # saving to file
+    '''
 
-    print("Creating t-SNE models...")
+    # print("Creating t-SNE models...")
     # Printing t-SNE model
-    make_tsne(train_vecs, train_labels)
+    # make_tsne(train_vecs, train_labels) #TODO FIX TO USE RIGHT ARGS
     # make_speaker_tsne(train_vecs, train_labels, train_df)
     # make_3d_tsne(train_vecs, train_labels)
 
+    print("STATUS UPDATE: Creating and training MLPClassifier model...\n")
+    start_time_4 = time.time()
+
     # creating actual models
-    # create_mlp(train_vecs, train_labels) # TODO: Store result and print return value
-    individual_mlp("David", train_df)
+    create_mlp(X_train, y_train, X_test, y_test) # TODO: Store result and print return value
+    # individual_mlp("David", train_df)
+
+    # TODO REMOVE logreg model
+    logreg = LogisticRegression()
+    logreg.fit(X_train, y_train)
+    print(logreg.score(X_test, y_test))
+
+    print("Took <%s minutes to create/train MLPClassifier model\n" % math.ceil((time.time() - start_time_4) / 60))
 
 main() # run main function
