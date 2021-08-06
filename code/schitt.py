@@ -35,7 +35,7 @@ import math
 # setup
 cores = multiprocessing.cpu_count()
 warnings.filterwarnings("ignore", category=UserWarning, module='bs4')
-plt.rcParams.update({'font.size': 22}) # make font-size of plot axes bigger
+# plt.rcParams.update({'font.size': 22}) # make font-size of plot axes bigger TODO move
 
 """
 Description: prints out comment at index i, its parent and whether it's labelled sarcastic or not
@@ -43,19 +43,6 @@ Parameters:
     df: data in pandas dataframe form
     i: index of desired comment
 """
-# TODO: Fix
-def print_post(df, i):
-    if (i < 0 or i > 1010825): # parameter out of range
-        print("print_post() error: Integer out of bounds, please choose number within [0, 1010825]\n")
-    else:
-        post = df[df.index == i][['parent_comment','comment','label']].values[0]
-        print("Parent Comment:", post[0])
-        print("Highlighted Comment:", post[1])
-        if(post[2] == 1):
-            print("Label: SARCASTIC\n")
-        else:
-            print("Label: NOT SARCASTIC\n")
-
 # file -> pandas df
 def parse(in_file):
     # in_df = pd.DataFrame(columns = ['label', 'comment', 'parent_comment'])
@@ -65,6 +52,22 @@ def parse(in_file):
 
     return df
 
+
+def print_line(df, i):
+    if (i < 0) or (i > (len(df) - 1)): # parameter out of range
+        print("print_line() ERROR: Integer out of bounds, please choose number within [0,", str(len(df) - 1) + "]\n")
+    else:
+        line = df[df.index == i][['speaker','line','label']].values[0]
+        print("Speaker:", line[0])
+        print("Line:", line[1])
+        if line[2] == "SARCASTIC":
+            print("Label: SARCASTIC\n")
+        elif line[2] == "RHETORICAL":
+            print("Label: RHETORICAL\n")
+        else:
+            print("Label: NOT SARCASTIC/RHETORICAL\n")
+
+# helps show if .csv is properly formatted
 def raw_data_vis(in_df):
     # visualizing dataset
     count_sarc = in_df['label'].value_counts()
@@ -84,17 +87,18 @@ def raw_data_vis(in_df):
     plt.ylabel('Number of Occurrences', fontsize=12)
     plt.xlabel('Sarcasm?', fontsize=12)
     plt.xticks(rotation=90)
+    plt.subplots_adjust(bottom=0.28)
     plt.show()
 
 def clean_txt(text):
     # TODO: Clean more (e.g. get rid of extra space before/after things)
     text = BeautifulSoup(text, "lxml").text
     # getting rid of punctuation
-    text = re.sub(r'\.',r'',text)
+    text = re.sub(r'..', r'', text)
     text = re.sub(r'\,', r'', text)
     text = re.sub(r'\?', r'', text)
     text = re.sub(r'\!', r'', text)
-    text = re.sub(r'\.\.\.', r'', text)
+    text = re.sub(r'..', r'', text)
     text = text.lower()
     return text
 
@@ -108,15 +112,18 @@ def tokenize(data):
     return tokens;
 
 def similar_words(model, word):
-    print("Similar words to", word + ":")
+    print("Similar words to \"" + word + "\" :")
     print("(Similarity scores rounded to 4 decimals)")
 
-    i = 0
-    while (i < len(model.wv.most_similar(word))):
-        print("Word:", model.wv.most_similar(word)[i][0], "- Similarity score:",
-              round(model.wv.most_similar(word)[i][1],4))
-        i += 1
-
+    if word in model.wv.index_to_key: # if word exists in scripts
+        i = 0
+        while (i < len(model.wv.most_similar(word))):
+            print("Word:", model.wv.most_similar(word)[i][0], "- Similarity score:",
+                  round(model.wv.most_similar(word)[i][1],4))
+            i += 1
+    else:
+        print("similar_words() ERROR: The word \"" + word +
+              "\" does not appear in the Schitt's Creek dialogue. Try a different one!\n")
 # referenced jeffd23 from kaggle here
 '''
 
@@ -143,7 +150,7 @@ def make_tsne(vectors, labels):
     for i in range(len(x)):
         if labels[i] == 1:
             plt.scatter(x[i], y[i], c='red', s=100)
-    plt.savefig('./visualizations/sarcasm_tsne.png', format = "png", transparent = True)
+    plt.savefig('./visualizations/sarcasm_tsne.png', format = "png") # set transparent = True to make bg transparent
 
 def make_speaker_tsne(vectors, labels, df):
     tsne_model = TSNE(perplexity=40, n_components=2, init='pca', n_iter=2500, random_state=23)
@@ -198,7 +205,7 @@ def make_speaker_tsne(vectors, labels, df):
         if speaker_list[i] == 4:
             plt.scatter(x[i], y[i], c='magenta', s=100)
     filename = "./visualizations/compare_sarcasm_tsne.png"
-    plt.savefig(filename, format = "png", transparent = True)
+    plt.savefig(filename, format = "png") # set transparent = True to make bg transparent
 
 def make_3d_tsne(vectors, labels):
     matplotlib.rcParams.update(matplotlib.rcParamsDefault) # resetting stylesheet changes
@@ -237,8 +244,7 @@ def make_learn_vec(model, tag_data):
     return targets, regressors
 
 def create_d2v_model(tag_train): # rename to create_d2v_model
-    max_epochs = 10
-    # global model  # defining as global var so accessible outside of this func TODO: might be a bad idea
+    max_epochs = 20 # TODO: Try changing this to see how accuracy changes
     model = Doc2Vec(workers = cores) # using dbow
 
     model.build_vocab(tag_train)
@@ -250,22 +256,22 @@ def create_mlp(train_vecs, train_labels, test_vecs, test_labels):
     # save results of d2v model in main
     scale_vecs = StandardScaler()
     scaled_train_vecs = scale_vecs.fit_transform(train_vecs)
-    # TODO: do above for test vecs too
     scaled_test_vecs = scale_vecs.transform(test_vecs)
 
-    # one hidden layer of size 100 TODO: Change hidden layers
-    basic_clf = MLPClassifier(hidden_layer_sizes=(100,),activation="relu",random_state=1).fit(scaled_train_vecs,
+    # TODO: change hidden layer sizes to see how accuracy changes
+    basic_clf = MLPClassifier(hidden_layer_sizes=(50,25,12,6),activation="relu",random_state=1).fit(scaled_train_vecs,
                                                                                               train_labels)
     label_pred = basic_clf.predict(scaled_test_vecs)
 
-    print(basic_clf.score(scaled_test_vecs, test_labels))
+    print(basic_clf.score(scaled_test_vecs, test_labels)) #TODO: indicate what scores these are pointing out
 
     matplotlib.rcParams.update(matplotlib.rcParamsDefault) # reset font-size
-    fig = plot_confusion_matrix(basic_clf, scaled_test_vecs, test_labels) # TODO: set display labels
+    fig = plot_confusion_matrix(basic_clf, scaled_test_vecs, test_labels) # can set display labels
     fig.figure_.suptitle("Sarcasm Confusion Matrix")
     filename = "./visualizations/sarcasm_confusion_matrix.png"
     plt.savefig(filename, format="png", bbox_inches = "tight")
 
+# TODO FIX
 def individual_mlp(speaker, df_train): # TODO: Add df_test
     df_train = df_train[df_train['speaker'].str.contains(speaker)] # removing all rows where speaker col !contain speaker param
     df_train.reset_index(drop=True, inplace=True) # resetting indices
@@ -315,8 +321,12 @@ def main():
     train_vecs_df = train_df
     test_vecs_df = test_df
 
-    # raw_data_vis(train_df) # shows details about the raw data count
-    # print_post(train_df, 0) # replace second parameter with integer within [0, 1010825]
+    # raw_data_vis(train_df) # Uncomment to show details about raw data count
+
+    # Uncomment to see line at an index
+    #   - Can change first param to test_df
+    #   - Change second param to number in [0, len(train_df)) (or test_df)
+    # print_line(train_df, 0)
 
     start_time_1 = time.time()  # used to calculate length of time to perform below task
     print("STATUS UPDATE: Cleaning data...\n")
@@ -333,14 +343,6 @@ def main():
     start_time_2 = time.time()
     print("STATUS UPDATE: Tokenizing data...\n")
 
-    # tagging script line with tag col
-    # TODO: could just not do it separately and combine before and tag at same time
-    # TODO: remove
-    '''
-    frames = [train_df, test_df]
-    combined_df = pd.concat(frames)
-    tag_all = combined_df.apply(lambda r: TaggedDocument(words=tokenize(r['line']), tags=[r.tag]), axis=1)
-    '''
     tag_train = train_df.apply(lambda r: TaggedDocument(words=tokenize(r['line']), tags=[r.tag]), axis=1)
     tag_test = test_df.apply(lambda r: TaggedDocument(words=tokenize(r['line']), tags=[r.tag]), axis=1)
 
@@ -352,8 +354,8 @@ def main():
     # Desc: Creating Doc2Vec model and saving
     filename = "./models/d2v_schitt.model"
 
-    # TODO COMMENT OUT
     # TODO: Uncomment to update model
+    '''
     print("STATUS UPDATE: Creating and training d2v model...\n")
     start_time_3 = time.time()
     
@@ -361,14 +363,15 @@ def main():
     model.save(filename)
     
     print("Took <%s minutes to create/train d2v model\n" % math.ceil((time.time() - start_time_3)/60))
+    '''
 
     # 3. USING MODEL
-    # model = Doc2Vec.load(filename) # loading existing model TODO: UNCOMMENT
+    model = Doc2Vec.load(filename) # loading existing model
     print("STATUS UPDATE: Loaded pre-existing model\n")
 
-    # Find similar words...
-    #word = "motel" # change this to the word you'd like to see
-    #similar_words(model, word)
+    # Uncomment to find similar words in data to given one
+    # word = "orangutan" # change this to the word you'd like to see
+    # similar_words(model, word.lower())
 
     y_train, X_train = make_learn_vec(model, tag_train)
     y_test, X_test = make_learn_vec(model, tag_test)

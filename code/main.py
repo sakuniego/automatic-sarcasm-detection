@@ -6,7 +6,7 @@ import math
 
 class SarcasmDataset(Dataset):
     def __init__(self):
-        self.train_data = pd.read_csv("./archive/train-balanced-sarcasm.csv")
+        self.train_data = pd.read_csv("../archive/train-balanced-sarcasm.csv")
 
     def __len__(self):
         return len(self.train_data)
