@@ -28,7 +28,7 @@ Basic classification model using novel data from the comedy show *Schitt's Creek
 ## Visualizations
 <figure>
  <img src="/visualizations/sarcasm_tsne.png" alt="Sarcasm t-SNE plot" width="400"/>
- <figcaption><em><b>Vis. 1<b>: t-SNE plot of sarcastic utterances (red) vs. non-sarcastic (grey)</em></figcaption>
+ <figcaption><em><b>Vis. 1</b>: t-SNE plot of sarcastic utterances (red) vs. non-sarcastic (grey)</em></figcaption>
 </figure>
 
 ## Potential Errors
